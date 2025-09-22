@@ -1,0 +1,135 @@
+/*Nunito Sans, Caveat and Rubik*/
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+
+@import "tailwindcss";
+
+@theme {
+    /* COLORS */
+    --color-tiefbraun: #2F2425;
+    --color-taubengrau: #8B8A8A;
+    --color-goldgelb: #E1A62B;
+    --color-mandelweiss: #FBF2E8;
+
+    /* FONTS */
+    --font-rubik: "Rubik", sans-serif;
+    --font-nunito: "Nunito Sans", sans-serif;
+    --font-caveat: "Caveat", cursive;
+
+    --font-rubik--font-variation-settings: "wght" 700;
+}
+
+
+.nunito-sans-light, :root {
+    font-family: "Nunito Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    font-variation-settings:
+            "wdth" 100,
+            "YTLC" 500;
+}
+
+.nunito-sans-extrabold, .highlight {
+    font-family: "Nunito Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 800;
+    font-style: normal;
+    font-variation-settings:
+            "wdth" 100,
+            "YTLC" 500;
+}
+
+.rubik-bold {
+    font-family: "Rubik", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.caveat-regular {
+     font-family: "Caveat", cursive;
+     font-optical-sizing: auto;
+     font-weight: 400;
+     font-style: normal;
+ }
+
+:root {
+  color-scheme: light;
+
+  color: var(--color-taubengrau);
+  background-color: var(--color-mandelweiss);
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+    scroll-behavior: smooth;
+
+    overflow-x: hidden;
+}
+
+/*@media (prefers-color-scheme: dark) {
+    :root {
+        color: var(--color-mandelweiss);           !* text *!
+        background-color: var(--color-tiefbraun)
+    }
+}*/
+
+h1 {
+    font-family: "Rubik", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+
+    color: var(--color-tiefbraun);
+}
+
+h2 {
+    font-family: "Rubik", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 3rem;
+    line-height: 1.1;
+    color: var(--color-tiefbraun);
+    padding-bottom: 1rem;
+}
+
+
+.hero_subtitle {
+    font-family: "Caveat", cursive;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    color: var(--color-tiefbraun);
+}
+
+.highlight {
+    color: var(--color-tiefbraun);
+    font-family: "Nunito Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 800;
+    font-style: normal;
+    font-variation-settings:
+            "wdth" 100,
+            "YTLC" 500;
+}
+
+.cursive_highlight {
+    font-family: "Caveat", cursive;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    color: var(--color-goldgelb);
+    font-size: 1.5rem;
+}
+
+.gradient-bg {
+    background: #2F2425;
+    background: -webkit-linear-gradient(0deg, rgba(47, 36, 37, 0.45) 32%, rgba(0, 0, 0, 0) 100%);
+    background: -moz-linear-gradient(0deg, rgba(47, 36, 37, 0.45) 32%, rgba(0, 0, 0, 0) 100%);
+    background: linear-gradient(0deg, rgba(47, 36, 37, 0.45) 32%, rgba(0, 0, 0, 0) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#2F2425", endColorstr="#000000", GradientType=0);
+}
