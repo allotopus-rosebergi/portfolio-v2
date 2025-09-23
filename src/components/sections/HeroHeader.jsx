@@ -1,49 +1,17 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { styles } from "../../styles.js";
 import { navLinks } from "../../constants/index.jsx";
 import { ReactComponent as LogoSvg } from "../../assets/svg/logo_vert.svg";
-import {TextAlignEnd, X} from "lucide-react";
+import {TextAlignEnd, X} from "lucide-react"; // for hamburger & close icons
 
-
-function Header() {
+function HeroHeader() {
     const [active, setActive] = useState("");
-    const [showHeader, setShowHeader] = useState(false); // start hidden
-    const [lastScrollY, setLastScrollY] = useState(0);
     const [drawerOpen, setDrawerOpen] = useState(false);
-
-    useEffect(() => {
-        const handleScroll = () => {
-            const currentScrollY = window.scrollY;
-
-            if (currentScrollY < window.innerHeight) {
-                setShowHeader(false);
-            } else {
-                if (currentScrollY > lastScrollY) {
-                    setShowHeader(false);
-                } else {
-                     setShowHeader(true);
-                }
-            }
-
-            setLastScrollY(currentScrollY);
-        };
-
-        window.addEventListener("scroll", handleScroll);
-
-        return () => {
-            window.removeEventListener("scroll", handleScroll);
-        };
-    }, [lastScrollY]);
 
     return (
         <>
             <nav
-                className={`${styles.paddingX} 
-                py-8 w-full flex justify-between fixed backdrop-blur-sm drop-shadow-md
-                bg-gradient-to-tl from-transparent  to-mandelweiss
-                top-0 z-20 transition-transform duration-300 ${
-                    showHeader ? "translate-y-0" : "-translate-y-full"
-                }`}
+                className={`${styles.paddingX} py-8 w-full flex justify-between absolute top-0 z-20 transition-transform duration-300`}
             >
                 <a
                     href="/#start"
@@ -53,7 +21,7 @@ function Header() {
                         window.scrollTo({ top: 0, behavior: "smooth" });
                     }}
                 >
-                    <LogoSvg className="w-2/3 " />
+                    <LogoSvg className="w-3/5 sm:w-2/3" />
                 </a>
 
                 <ul className="list-none hidden sm:flex flex-row items-center gap-10">
@@ -121,4 +89,4 @@ function Header() {
     );
 }
 
-export default Header;
+export default HeroHeader;

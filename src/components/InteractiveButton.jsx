@@ -1,0 +1,30 @@
+import React from "react";
+import { ArrowRight } from "lucide-react";
+
+export const InteractiveHoverButton = React.forwardRef(
+    ({ children, className = "", ...props }, ref) => {
+        const baseClasses =
+            "group relative w-auto cursor-pointer overflow-hidden rounded-full border border-mandelweiss sm:border-mandelweisstransp bg-background p-2 px-6 text-center font-semibold background-blur-xs text-mandelweiss sm:text-mandelweisstransp backdrop-blur-xs hover:text-mandelweiss hover:border-mandelweiss transition-transform transition-shadow duration-300 hover:scale-105 hover:rotate-2 drop-shadow-md hover:drop-shadow-2xl"
+
+        return (
+            <button
+                ref={ref}
+                className={`${baseClasses} ${className}`.trim()}
+                {...props}
+            >
+                <div className="flex items-center gap-2">
+                    <div className="h-2 w-2 rounded-full bg-primary transition-all duration-300 group-hover:scale-[100.8]"></div>
+                    <span className="inline-block transition-all duration-300 group-hover:translate-x-12 group-hover:opacity-0">
+            {children}
+          </span>
+                </div>
+                <div className="absolute top-0 z-10 flex h-full w-full translate-x-12 items-center justify-center gap-2 text-primary-foreground opacity-0 transition-all duration-300 group-hover:-translate-x-5 group-hover:opacity-100">
+                    <span>{children}</span>
+                    <ArrowRight />
+                </div>
+            </button>
+        );
+    }
+);
+
+InteractiveHoverButton.displayName = "InteractiveHoverButton";

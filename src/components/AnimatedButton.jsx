@@ -51,7 +51,7 @@ function AnimatedButton({
     const classes = classNames(
         "button relative px-12 py-1.5 border duration-300 overflow-hidden font-sans",
         {
-            "border-mandelweiss text-mandelweiss": primary && !outline,
+            "border-mandelweiss text-mandelweiss backdrop-blur-xs": primary && !outline,
             "border-color-gray bg-color-gray text-color-light": secondary && !outline,
             "text-color-light": simple_w && !outline,
             "text-color-dark": simple_b && !outline,
@@ -74,7 +74,7 @@ function AnimatedButton({
                     "circle absolute rounded-full z-0 pointer-events-none",
                     {
                         "bg-color-dark": outline,
-                        "bg-white opacity-15": !outline,
+                        "bg-goldgelb opacity-50 backdrop-blur-2xl": !outline,
                     }
                 )}
                 style={{

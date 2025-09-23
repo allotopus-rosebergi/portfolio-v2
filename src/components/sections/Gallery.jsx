@@ -1,4 +1,4 @@
-import {gallery} from '../../constants/index.js'
+import {gallery} from '../../constants/index.jsx'
 import {styles} from "../../styles.js";
 
 function Gallery() {

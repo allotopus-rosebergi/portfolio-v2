@@ -10,6 +10,9 @@
     --color-taubengrau: #8B8A8A;
     --color-goldgelb: #E1A62B;
     --color-mandelweiss: #FBF2E8;
+    --color-mandelweisstransp: #FBF2E8BB;
+
+    --color-goldgelbhighlight: #f4c462;
 
     /* FONTS */
     --font-rubik: "Rubik", sans-serif;
@@ -28,6 +31,11 @@
     font-variation-settings:
             "wdth" 100,
             "YTLC" 500;
+}
+.lineChild {
+    overflow: hidden;
+    display: block;
+    line-height: 1.1em;
 }
 
 .nunito-sans-extrabold, .highlight {
@@ -93,6 +101,17 @@ h2 {
     font-style: normal;
     font-size: 3rem;
     line-height: 1.1;
+    color: var(--color-tiefbraun);
+    padding-bottom: 1rem;
+}
+
+h3 {
+    font-family: "Rubik", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 2rem;
+    line-height: 0.3;
     color: var(--color-tiefbraun);
     padding-bottom: 1rem;
 }

@@ -1,6 +1,46 @@
 import {styles} from "../../styles.js";
+import { Highlighter } from "../highlighter.jsx";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { SplitText } from "gsap/SplitText";
+import {gsap} from "gsap";
+import {useEffect} from "react";
+
+gsap.registerPlugin(ScrollTrigger,SplitText);
 
 function Quality() {
+    useEffect(() => {
+        const split = new SplitText('.para2', {type: "lines"});
+        gsap.fromTo(split.lines,
+            { opacity: 0, y: 20 },
+            {
+                opacity: 1,
+                y: 0,
+                duration: 0.3,
+                stagger: 0.1,
+                delay: 0.3,
+                scrollTrigger: {
+                    trigger: ".para2",
+                    start: "top 80%",
+                    end: "top 55%",
+                }
+            }
+        );
+
+        gsap.fromTo('.title2',
+            { opacity: 0, y: 20 },
+            {
+                opacity: 1,
+                y: 0,
+                ease: "power1.inOut",
+                scrollTrigger: {
+                    trigger: ".para2",
+                    start: "top 80%",
+                    end: "top 55%",
+                }
+            }
+        );
+    }, []);
+
     return (
         <section id="qualitaet">
             <div  className={styles.margin} >
@@ -9,8 +49,16 @@ function Quality() {
                     <img src="src/assets/img/kartoffeln.webp" alt="Kartoffeln" className="w-full sm:w-1/2 object-cover"/>
 
                     <div className="w-full sm:w-1/2 flex flex-col justify-center px-6">
-                        <h2> Was macht unsere Erdäpfel so besonders? </h2>
-                        <p> Unsere Erdäpfel wachsen im Waldviertel in Langfeld. Die Region ist bekannt für ihren <span className="highlight"> nährstoffreichen Boden </span> und das <span className="highlight"> ideale Klima </span>. Durch die mineralhaltige Erde und die sorgfältige Bewirtschaftung entstehen Erdäpfel mit einzigartigem Geschmack, hoher Qualität und langer Haltbarkeit. </p>
+                        <h2 className="title2"> Was macht unsere Erdäpfel so besonders? </h2>
+                        <p className="para2"> Unsere Erdäpfel wachsen im Waldviertel in Langfeld. Die Region ist bekannt für ihren
+                            <Highlighter action="underline">
+                                nährstoffreichen Boden
+                            </Highlighter>{" "}
+                            und das
+                            <Highlighter action="underline">
+                                ideale Klima.
+                            </Highlighter>{" "}
+                            Durch die mineralhaltige Erde und die sorgfältige Bewirtschaftung entstehen Erdäpfel mit einzigartigem Geschmack, hoher Qualität und langer Haltbarkeit. </p>
                     </div>
 
                 </div>
