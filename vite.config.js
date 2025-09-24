@@ -17,4 +17,5 @@ export default defineConfig({
           include: '**/*.svg',
       }),
   ],
+    base: '/langfelder/',
 })
