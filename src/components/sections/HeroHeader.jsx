@@ -15,7 +15,7 @@ function HeroHeader() {
             >
                 <div className="max-w-[2000px] mx-auto flex justify-between">
                     <a
-                        href="/#/#start"
+                        href="#/#start"
                         className="flex items-center gap-2"
                         onClick={() => {
                             setActive("");
@@ -34,7 +34,7 @@ function HeroHeader() {
                                 } cursor-pointer transition-transform duration-300 hover:scale-125 hover:rotate-2 hover:border-b-[1px]`}
                                 onClick={() => setActive(link.slug)}
                             >
-                                <a href={`/#/#${link.slug}`}>{link.title}</a>
+                                <a href={`#/#${link.slug}`}>{link.title}</a>
                             </li>
                         ))}
                     </ul>
@@ -73,7 +73,7 @@ function HeroHeader() {
                     {navLinks.map((link) => (
                         <li key={link.id}>
                             <a
-                                href={`/#/#${link.slug}`}
+                                href={`#/#${link.slug}`}
                                 className={`${
                                     active === link.slug ? "text-tiefbraun" : "text-tiefbraun"
                                 } block text-4xl`}
