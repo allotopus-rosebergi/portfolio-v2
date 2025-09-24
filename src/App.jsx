@@ -8,7 +8,7 @@ import ScrollToHashElement from "./components/ScrollToHashElement.jsx";
 
 function App() {
   return (
-      <HashRouter basename="/langfelder">
+      <HashRouter>
           <ScrollToHashElement/>
           <div className="relative z-0 ">
               <Routes>
