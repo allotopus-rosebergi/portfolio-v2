@@ -70,8 +70,18 @@ export const potato_range = [
         img: img_ditta,
         description: (
             <>
-                Mit ihrer kräftig gelben Farbe ist Ditta eine vielseitige Sorte, die sich besonders gut für <Highlighter action="highlight"><span className="text-tiefbraun">Bratkartoffel, Salate </span></Highlighter> und viele andere Gerichte eignet.
+                Mit ihrer kräftig gelben Farbe ist Ditta eine vielseitige Sorte,
+                die sich besonders gut für{" "}
+                <Highlighter action="highlight">
+                    <span className="text-tiefbraun">Bratkartoffel</span>
+                </Highlighter>
+                ,{" "}
+                <Highlighter action="highlight">
+                    <span className="text-tiefbraun">Salate</span>
+                </Highlighter>{" "}
+                und viele andere Gerichte eignet.
             </>
+
         )
     },
     {
@@ -82,7 +92,24 @@ export const potato_range = [
         img: img_agria,
         description: (
             <>
-                Die Sorte Agria überzeugt mit gelbem Fleisch und kräftiger Farbe. Sie eignet sich ideal für <Highlighter action="highlight"> <span className="text-tiefbraun"> Püree, Knödel, Pommes Frites  </span> </Highlighter> und <Highlighter action="highlight"> <span className="text-tiefbraun"> knusprige Chips.</span></Highlighter>
+                Die Sorte Agria überzeugt mit gelbem Fleisch und kräftiger Farbe.
+                Sie eignet sich ideal für{" "}
+                <Highlighter action="highlight">
+                    <span className="text-tiefbraun">Püree</span>
+                </Highlighter>
+                ,{" "}
+                <Highlighter action="highlight">
+                    <span className="text-tiefbraun">Knödel</span>
+                </Highlighter>
+                ,{" "}
+                <Highlighter action="highlight">
+                    <span className="text-tiefbraun">Pommes Frites</span>
+                </Highlighter>{" "}
+                und{" "}
+                <Highlighter action="highlight">
+                    <span className="text-tiefbraun">knusprige Chips</span>
+                </Highlighter>
+                .
             </>
         )
     },
@@ -94,7 +121,20 @@ export const potato_range = [
         img: img_hermes,
         description: (
             <>
-                Hermes hat eine sehr runde Knolle, eine gelbe Schale und ein gelbliches Fleisch. Sie eignet sich hervorragend für mehlige Speisen wie <Highlighter action="highlight"><span className="text-tiefbraun">Püree, Knödel</span></Highlighter> oder <Highlighter action="highlight"><span className="text-tiefbraun">Eintöpfe.</span></Highlighter>
+                Hermes hat eine sehr runde Knolle, eine gelbe Schale und ein gelbliches Fleisch.
+                Sie eignet sich hervorragend für mehlige Speisen wie{" "}
+                <Highlighter action="highlight">
+                    <span className="text-tiefbraun">Püree</span>
+                </Highlighter>
+                ,{" "}
+                <Highlighter action="highlight">
+                    <span className="text-tiefbraun">Knödel</span>
+                </Highlighter>{" "}
+                oder{" "}
+                <Highlighter action="highlight">
+                    <span className="text-tiefbraun">Eintöpfe</span>
+                </Highlighter>
+                .
             </>
         )
     },
@@ -110,17 +150,4 @@ export const potato_range = [
             </>
         )
     },
-    {
-        id: '4',
-        special: 'Nur auf Anfrage!',
-        name: 'Futter-Erdäpfel',
-        characteristics: 'verschiedene Sorten',
-        img: img_ditta,
-        description: (
-            <>
-                Wir verkaufen auch Futter-Erdäpfel aus verschiedenen Sorten, die nicht den Ansprüchen für den Verkauf als Speisekartoffeln entsprechen, jedoch nährstoffreich sind und sich ideal als <Highlighter action="highlight"><span className="text-tiefbraun">Futtermittel für Tiere </span></Highlighter>eignet.
-            </>
-        )
-    },
-
 ]

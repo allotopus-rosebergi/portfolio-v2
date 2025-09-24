@@ -9,42 +9,42 @@ gsap.registerPlugin(ScrollTrigger,SplitText);
 
 function Quality() {
     useEffect(() => {
-        const split = new SplitText('.para2', {type: "lines"});
-        gsap.fromTo(split.lines,
-            { opacity: 0, y: 20 },
-            {
-                opacity: 1,
-                y: 0,
-                duration: 0.3,
-                stagger: 0.1,
-                delay: 0.3,
-                scrollTrigger: {
-                    trigger: ".para2",
-                    start: "top 80%",
-                    end: "top 55%",
+        document.fonts.ready.then(() => {
+            gsap.fromTo(".para2",
+                {opacity: 0, y: 20},
+                {
+                    opacity: 1,
+                    y: 0,
+                    duration: 0.3,
+                    delay: 0.3,
+                    scrollTrigger: {
+                        trigger: ".para2",
+                        start: "top 80%",
+                        end: "top 55%",
+                    }
                 }
-            }
-        );
+            );
 
-        gsap.fromTo('.title2',
-            { opacity: 0, y: 20 },
-            {
-                opacity: 1,
-                y: 0,
-                ease: "power1.inOut",
-                scrollTrigger: {
-                    trigger: ".para2",
-                    start: "top 80%",
-                    end: "top 55%",
+            gsap.fromTo('.title2',
+                {opacity: 0, y: 20},
+                {
+                    opacity: 1,
+                    y: 0,
+                    ease: "power1.inOut",
+                    scrollTrigger: {
+                        trigger: ".para2",
+                        start: "top 80%",
+                        end: "top 55%",
+                    }
                 }
-            }
-        );
+            );
+        });
     }, []);
 
     return (
         <section id="qualitaet">
             <div  className={styles.margin} >
-                <div className="flex flex-col sm:flex-row gap-16">
+                <div className="flex flex-col-reverse sm:flex-row gap-8 mt-8 sm_mt-0 sm:gap-16">
 
                     <img src="src/assets/img/kartoffeln.webp" alt="Kartoffeln" className="w-full sm:w-1/2 object-cover"/>
 
@@ -52,12 +52,12 @@ function Quality() {
                         <h2 className="title2"> Was macht unsere Erdäpfel so besonders? </h2>
                         <p className="para2"> Unsere Erdäpfel wachsen im Waldviertel in Langfeld. Die Region ist bekannt für ihren
                             <Highlighter action="underline">
-                                nährstoffreichen Boden
-                            </Highlighter>{" "}
+                                <span className="text-goldgelb font-bold">nährstoffreichen Boden</span>
+                            </Highlighter>
                             und das
                             <Highlighter action="underline">
-                                ideale Klima.
-                            </Highlighter>{" "}
+                                <span className="text-goldgelb font-bold">ideale Klima.</span>
+                            </Highlighter>
                             Durch die mineralhaltige Erde und die sorgfältige Bewirtschaftung entstehen Erdäpfel mit einzigartigem Geschmack, hoher Qualität und langer Haltbarkeit. </p>
                     </div>
 

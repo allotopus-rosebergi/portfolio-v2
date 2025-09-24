@@ -7,8 +7,9 @@ import { gsap } from "gsap";
 
 import { SplitText } from "gsap/SplitText";
 import { TextPlugin } from "gsap/TextPlugin";
+import {ScrollTrigger} from "gsap/ScrollTrigger";
 
-gsap.registerPlugin(SplitText,TextPlugin);
+gsap.registerPlugin(SplitText,TextPlugin, ScrollTrigger);
 
 function Hero () {
     const [setActive] = useState("");
@@ -45,6 +46,9 @@ function Hero () {
                     stagger: {
                         amount: 0.2,
                         from: "start",
+                    },
+                    onComplete: () => {
+                        ScrollTrigger.refresh();
                     }
                 }
             );
@@ -74,6 +78,7 @@ function Hero () {
     return (
         <>
             <HeroHeader />
+
             <div className="h-1/2 w-full flex justify-end items-center flex-col">
                 <h1 className="hero_text text-3xl sm:text-6xl"> LANGFELDER </h1>
                 <h1 className="hero_text text-4xl sm:text-7xl"> BIO ERDÄPFEL</h1>
@@ -83,7 +88,7 @@ function Hero () {
 
 
             <div className={`${styles.paddingX} h-1/2 w-full flex justify-center items-center flex-col gradient-bg`}>
-                <InteractiveHoverButton className="mb-4 hero_button" onClick={() => {
+                <InteractiveHoverButton className="mb-4 hero_button text-mandelweiss sm:text-mandelweisstransp border-mandelweiss sm:border-mandelweisstransp hover:text-mandelweiss hover:border-mandelweiss" onClick={() => {
                     const kontaktSection = document.getElementById("kontakt");
                     if (kontaktSection) {
                         kontaktSection.scrollIntoView({ behavior: "smooth" });

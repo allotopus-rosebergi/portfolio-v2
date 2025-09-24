@@ -10,7 +10,7 @@ function App() {
   return (
       <BrowserRouter>
           <ScrollToHashElement/>
-          <div className="relative z-0">
+          <div className="relative z-0 ">
               <Routes>
                   <Route
                       path="/"
@@ -19,12 +19,17 @@ function App() {
                               <div className="h-screen bg-[url(./assets/img/background_pond.webp)] bg-cover bg-[center_top]">
                                   <Hero />
                               </div>
+
                               <Header />
-                              <AboutUs />
-                              <Quality />
-                              <Products />
-                              <Gallery />
-                              <Contact />
+
+                              <div className="max-w-[2000px] mx-auto">
+                                  <AboutUs />
+                                  <Quality />
+                                  <Products />
+                                  <Gallery />
+                                  <Contact />
+                              </div>
+
                               <Footer />
                           </>
                       }

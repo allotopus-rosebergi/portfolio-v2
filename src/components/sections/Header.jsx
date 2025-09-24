@@ -6,12 +6,15 @@ import {TextAlignEnd, X} from "lucide-react";
 
 
 function Header() {
-    const [active, setActive] = useState("");
-    const [showHeader, setShowHeader] = useState(false); // start hidden
-    const [lastScrollY, setLastScrollY] = useState(0);
     const [drawerOpen, setDrawerOpen] = useState(false);
+    const [active, setActive] = useState("");
+    const [showHeader, setShowHeader] = useState(false);
+    const [lastScrollY, setLastScrollY] = useState(0);
+
 
     useEffect(() => {
+        const threshold = 10;
+
         const handleScroll = () => {
             const currentScrollY = window.scrollY;
 
@@ -20,7 +23,7 @@ function Header() {
             } else {
                 if (currentScrollY > lastScrollY) {
                     setShowHeader(false);
-                } else {
+                } else if (lastScrollY - currentScrollY > threshold) {
                      setShowHeader(true);
                 }
             }
@@ -39,44 +42,46 @@ function Header() {
         <>
             <nav
                 className={`${styles.paddingX} 
-                py-8 w-full flex justify-between fixed backdrop-blur-sm drop-shadow-md
-                bg-gradient-to-tl from-transparent  to-mandelweiss
-                top-0 z-20 transition-transform duration-300 ${
+                py-8 w-full  backdrop-blur-sm drop-shadow-md
+                bg-gradient-to-tl from-transparent fixed to-mandelweiss
+                top-0 z-20 transition-transform duration-300 
+                ${
                     showHeader ? "translate-y-0" : "-translate-y-full"
                 }`}
             >
-                <a
-                    href="/#start"
-                    className="flex items-center gap-2"
-                    onClick={() => {
-                        setActive("");
-                        window.scrollTo({ top: 0, behavior: "smooth" });
-                    }}
-                >
-                    <LogoSvg className="w-2/3 " />
-                </a>
+                <div className="max-w-[2000px] mx-auto w-full flex justify-between ">
+                    <a
+                        href="/#start"
+                        className="flex items-center gap-2"
+                        onClick={() => {
+                            setActive("");
+                            window.scrollTo({ top: 0, behavior: "smooth" });
+                        }}
+                    >
+                        <LogoSvg className="w-2/3 " />
+                    </a>
 
-                <ul className="list-none hidden sm:flex flex-row items-center gap-10">
-                    {navLinks.map((link) => (
-                        <li
-                            key={link.id}
-                            className={`${
-                                active === link.slug ? "text-tiefbraun" : "text-tiefbraun"
-                            } cursor-pointer transition-transform duration-300 hover:scale-125 hover:rotate-2 hover:border-b-[1px]`}
-                            onClick={() => setActive(link.slug)}
-                        >
-                            <a href={`/#${link.slug}`}>{link.title}</a>
-                        </li>
-                    ))}
-                </ul>
+                    <ul className="list-none hidden sm:flex flex-row items-center gap-10">
+                        {navLinks.map((link) => (
+                            <li
+                                key={link.id}
+                                className={`${
+                                    active === link.slug ? "text-tiefbraun" : "text-tiefbraun"
+                                } cursor-pointer transition-transform duration-300 hover:scale-125 hover:rotate-2 hover:border-b-[1px]`}
+                                onClick={() => setActive(link.slug)}
+                            >
+                                <a href={`/#${link.slug}`}>{link.title}</a>
+                            </li>
+                        ))}
+                    </ul>
 
-                <button
-                    className="sm:hidden text-tiefbraun"
-                    onClick={() => setDrawerOpen(true)}
-                >
-                    <TextAlignEnd size={34} />
-                </button>
-
+                    <button
+                        className="sm:hidden text-tiefbraun"
+                        onClick={() => setDrawerOpen(true)}
+                    >
+                        <TextAlignEnd size={34} />
+                    </button>
+                </div>
             </nav>
 
             {drawerOpen && (

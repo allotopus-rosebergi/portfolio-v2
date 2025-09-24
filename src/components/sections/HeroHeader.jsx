@@ -11,39 +11,42 @@ function HeroHeader() {
     return (
         <>
             <nav
-                className={`${styles.paddingX} py-8 w-full flex justify-between absolute top-0 z-20 transition-transform duration-300`}
+                className={`${styles.paddingX} py-8 w-full  absolute top-0 z-20 transition-transform duration-300`}
             >
-                <a
-                    href="/#start"
-                    className="flex items-center gap-2"
-                    onClick={() => {
-                        setActive("");
-                        window.scrollTo({ top: 0, behavior: "smooth" });
-                    }}
-                >
-                    <LogoSvg className="w-3/5 sm:w-2/3" />
-                </a>
+                <div className="max-w-[2000px] mx-auto flex justify-between">
+                    <a
+                        href="/#start"
+                        className="flex items-center gap-2"
+                        onClick={() => {
+                            setActive("");
+                            window.scrollTo({ top: 0, behavior: "smooth" });
+                        }}
+                    >
+                        <LogoSvg className="w-3/5 sm:w-2/3" />
+                    </a>
 
-                <ul className="list-none hidden sm:flex flex-row items-center gap-10">
-                    {navLinks.map((link) => (
-                        <li
-                            key={link.id}
-                            className={`${
-                                active === link.slug ? "text-tiefbraun" : "text-tiefbraun"
-                            } cursor-pointer transition-transform duration-300 hover:scale-125 hover:rotate-2 hover:border-b-[1px]`}
-                            onClick={() => setActive(link.slug)}
-                        >
-                            <a href={`/#${link.slug}`}>{link.title}</a>
-                        </li>
-                    ))}
-                </ul>
+                    <ul className="list-none hidden sm:flex flex-row items-center gap-10">
+                        {navLinks.map((link) => (
+                            <li
+                                key={link.id}
+                                className={`${
+                                    active === link.slug ? "text-tiefbraun" : "text-tiefbraun"
+                                } cursor-pointer transition-transform duration-300 hover:scale-125 hover:rotate-2 hover:border-b-[1px]`}
+                                onClick={() => setActive(link.slug)}
+                            >
+                                <a href={`/#${link.slug}`}>{link.title}</a>
+                            </li>
+                        ))}
+                    </ul>
 
-                <button
-                    className="sm:hidden text-tiefbraun"
-                    onClick={() => setDrawerOpen(true)}
-                >
-                    <TextAlignEnd size={34} />
-                </button>
+                    <button
+                        className="sm:hidden text-tiefbraun"
+                        onClick={() => setDrawerOpen(true)}
+                    >
+                        <TextAlignEnd size={34} />
+                    </button>
+                </div>
+
 
             </nav>
 

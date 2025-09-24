@@ -11,49 +11,50 @@ gsap.registerPlugin(ScrollTrigger,SplitText);
 
 function AboutUs() {
     useEffect(() => {
-        const split = new SplitText('.para', {type: "lines"});
-        gsap.fromTo(split.lines,
-            { opacity: 0, y: 20 },
-            {
-                opacity: 1,
-                y: 0,
-                duration: 0.3,
-                stagger: 0.1,
-                delay: 0.3,
-                scrollTrigger: {
-                    trigger: ".para",
-                    start: "top 80%",
-                    end: "top 55%",
+        document.fonts.ready.then(() => {
+            gsap.fromTo(".para",
+                {opacity: 0, y: 20},
+                {
+                    opacity: 1,
+                    y: 0,
+                    duration: 0.3,
+                    stagger: 0.1,
+                    delay: 0.3,
+                    scrollTrigger: {
+                        trigger: ".para",
+                        start: "top 80%",
+                        end: "top 20%",
+                    }
                 }
-            }
-        );
+            );
 
-        gsap.fromTo('.title',
-            { opacity: 0, y: 20 },
-            {
-                opacity: 1,
-                y: 0,
-                ease: "power1.inOut",
-                scrollTrigger: {
-                    trigger: ".para",
-                    start: "top 80%",
-                    end: "top 55%",
+            gsap.fromTo('.title',
+                {opacity: 0, y: 20},
+                {
+                    opacity: 1,
+                    y: 0,
+                    ease: "power1.inOut",
+                    scrollTrigger: {
+                        trigger: ".para",
+                        start: "top 80%",
+                        end: "top 20%",
+                    }
                 }
-            }
-        );
+            );
+        });
     }, []);
     return (
         <section id="ueber-uns">
             <div  className={styles.margin} >
                 <div className="flex flex-col sm:flex-row gap-16">
 
-                    <img src="src/assets/img/about_us.webp" alt="Über Uns" className="w-full sm:w-1/2 object-cover"/>
+                    <img src="src/assets/img/about_us.webp" alt="Über Uns" className=" w-full sm:w-1/2 object-cover"/>
 
                     <div className="w-full sm:w-1/2 flex flex-col justify-center px-6">
                         <p className="title cursive_highlight"> Willkommen! </p>
                         <h2 className="title"> Wir sind die Familie Semper</h2>
                         <p className="para"> … ehemals Lassl.
-                            <Highlighter action="underline">Schon seit 1992 </Highlighter>  dreht sich bei uns alles um Erdäpfel. Als Familienbetrieb arbeiten wir Seite an Seite und bringen Erfahrung und Begeisterung für die Landwirtschaft zusammen. </p>
+                            <Highlighter action="underline"> <span className="text-goldgelb font-bold">Schon seit 1992 </span></Highlighter>  dreht sich bei uns alles um Erdäpfel. Als Familienbetrieb arbeiten wir Seite an Seite und bringen Erfahrung und Begeisterung für die Landwirtschaft zusammen. </p>
                     </div>
 
                 </div>

@@ -68,6 +68,8 @@
   color: var(--color-taubengrau);
   background-color: var(--color-mandelweiss);
 
+    font-size: 1rem;
+
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -76,6 +78,12 @@
     scroll-behavior: smooth;
 
     overflow-x: hidden;
+}
+
+@media (min-width: 1512px) {
+    :root {
+        font-size: 1.5rem;
+    }
 }
 
 /*@media (prefers-color-scheme: dark) {
