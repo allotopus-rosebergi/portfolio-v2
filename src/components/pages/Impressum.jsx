@@ -47,7 +47,7 @@ function Impressum() {
                 </section>
 
                 <div className="w-full flex flex-row justify-center mt-8 sm:mt-16">
-                    <InteractiveHoverButton className="text-tiefbraun border-tiefbraun"onClick={() => (window.location.href = "/")}> Zurück zum Start <span>&#8203;</span> <span>&#8203;</span><span>&#8203;</span><span>&#8203;</span><span>&#8203;</span></InteractiveHoverButton>
+                    <InteractiveHoverButton className="text-tiefbraun border-tiefbraun"onClick={() => (window.location.href = "#/")}> Zurück zum Start <span>&#8203;</span> <span>&#8203;</span><span>&#8203;</span><span>&#8203;</span><span>&#8203;</span></InteractiveHoverButton>
                 </div>
             </div>
         </div>

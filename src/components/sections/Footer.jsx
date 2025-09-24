@@ -18,8 +18,8 @@ function Footer() {
                     <p> office@lorem-ipsum.at</p>
                 </div>
                 <div className="flex flex-col">
-                    <a href="/impressum" className="hover:text-goldgelb"> Impressum </a>
-                    <a href="/datenschutz" className="hover:text-goldgelb"> Datenschutz </a>
+                    <a href="#/impressum" className="hover:text-goldgelb"> Impressum </a>
+                    <a href="#/datenschutz" className="hover:text-goldgelb"> Datenschutz </a>
                 </div>
                 <div>
                     <p> @2025 Alle Rechte vorbehalten. </p>

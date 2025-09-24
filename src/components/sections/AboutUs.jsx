@@ -7,6 +7,10 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { SplitText } from "gsap/SplitText";
 import {Split} from "lucide-react";
 
+import AboutUsImg from '../../assets/img/about_us.webp'
+import FamilenfotoImg from '../../assets/img/about_us_full.webp'
+
+
 gsap.registerPlugin(ScrollTrigger,SplitText);
 
 function AboutUs() {
@@ -48,7 +52,7 @@ function AboutUs() {
             <div  className={styles.margin} >
                 <div className="flex flex-col sm:flex-row gap-16">
 
-                    <img src="src/assets/img/about_us.webp" alt="Über Uns" className=" w-full sm:w-1/2 object-cover"/>
+                    <img src={AboutUsImg} alt="Über Uns" className=" w-full sm:w-1/2 object-cover"/>
 
                     <div className="w-full sm:w-1/2 flex flex-col justify-center px-6">
                         <p className="title cursive_highlight"> Willkommen! </p>
@@ -61,7 +65,7 @@ function AboutUs() {
             </div>
 
             <div className={`${styles.marginY} mt-16`}>
-                <img src="src/assets/img/about_us_full.webp" alt="Über uns Familienfoto" className="w-full aspect-1/1 sm:aspect-auto object-cover"/>
+                <img src={FamilenfotoImg} alt="Über uns Familienfoto" className="w-full aspect-1/1 sm:aspect-auto object-cover"/>
             </div>
         </section>
     )

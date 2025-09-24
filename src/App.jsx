@@ -1,4 +1,4 @@
-import {BrowserRouter, Routes, Route} from "react-router-dom";
+import {HashRouter, Routes, Route} from "react-router-dom";
 import {Header, Hero, AboutUs, Quality, Products, Gallery, Contact, Footer} from './components/sections';
 import { Impressum, Datenschutz } from "./components/pages";
 import HeroHeader from "./components/sections/HeroHeader.jsx";
@@ -8,7 +8,7 @@ import ScrollToHashElement from "./components/ScrollToHashElement.jsx";
 
 function App() {
   return (
-      <BrowserRouter>
+      <HashRouter>
           <ScrollToHashElement/>
           <div className="relative z-0 ">
               <Routes>
@@ -55,7 +55,7 @@ function App() {
                   />
               </Routes>
           </div>
-      </BrowserRouter>
+      </HashRouter>
   )
 }
 

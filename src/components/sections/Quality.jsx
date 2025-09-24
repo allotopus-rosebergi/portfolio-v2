@@ -5,6 +5,9 @@ import { SplitText } from "gsap/SplitText";
 import {gsap} from "gsap";
 import {useEffect} from "react";
 
+import KartoffelImg from '../../assets/img/kartoffeln.webp'
+
+
 gsap.registerPlugin(ScrollTrigger,SplitText);
 
 function Quality() {
@@ -46,7 +49,7 @@ function Quality() {
             <div  className={styles.margin} >
                 <div className="flex flex-col-reverse sm:flex-row gap-8 mt-8 sm_mt-0 sm:gap-16">
 
-                    <img src="src/assets/img/kartoffeln.webp" alt="Kartoffeln" className="w-full sm:w-1/2 object-cover"/>
+                    <img src={KartoffelImg} alt="Kartoffeln" className="w-full sm:w-1/2 object-cover"/>
 
                     <div className="w-full sm:w-1/2 flex flex-col justify-center px-6">
                         <h2 className="title2"> Was macht unsere Erdäpfel so besonders? </h2>

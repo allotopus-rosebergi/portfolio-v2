@@ -3,6 +3,8 @@ import {useEffect} from "react";
 import {SplitText} from "gsap/SplitText";
 import {gsap} from "gsap";
 
+import StandlImg from '../../assets/img/verkaufsstand.webp'
+
 function Contact (){
     useEffect(() => {
         document.fonts.ready.then(() => {
@@ -61,7 +63,7 @@ function Contact (){
                 <div  className={`${styles.margin} mt-8 sm:my-16`} >
                     <div className="flex flex-col-reverse sm:flex-row gap-8 sm:gap-16">
 
-                        <img src="src/assets/img/verkaufsstand.webp" alt="Verkaufsstand" className="w-full sm:w-1/2 object-cover"/>
+                        <img src={StandlImg} alt="Verkaufsstand" className="w-full sm:w-1/2 object-cover"/>
 
                         <div className="w-full sm:w-1/2 flex flex-col justify-center px-6">
                             <h2 className="title3"> Wie kommen Sie zu unseren Erdäpfeln? </h2>
