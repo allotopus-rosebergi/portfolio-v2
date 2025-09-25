@@ -4,6 +4,8 @@ import { Impressum, Datenschutz } from "./components/pages";
 import HeroHeader from "./components/sections/HeroHeader.jsx";
 import ScrollToHashElement from "./components/ScrollToHashElement.jsx";
 
+import BgImg from "./assets/img/bg-new-tall.webp"
+
 
 
 function App() {
@@ -16,7 +18,7 @@ function App() {
                       path="/"
                       element={
                           <>
-                              <div className="h-screen bg-[url(./assets/img/background_pond.webp)] bg-cover bg-[center_top]">
+                              <div style={{ backgroundImage: `url(${BgImg})` }} className={`w-full min-h-screen flex flex-col gap-8 bg-cover bg-[center]`}>
                                   <Hero />
                               </div>
 

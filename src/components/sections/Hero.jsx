@@ -79,25 +79,32 @@ function Hero () {
         <>
             <HeroHeader />
 
-            <div className="h-1/2 w-full flex justify-end items-center flex-col">
-                <h1 className="hero_text text-3xl sm:text-6xl"> LANGFELDER </h1>
-                <h1 className="hero_text text-4xl sm:text-7xl"> BIO ERDÄPFEL</h1>
-                <p className="hero_text hero_subtitle text-2xl sm:text-5xl"> Aus der Region mit den besten Erdäpfeln</p>
+            <div className="flex-1 flex flex-col justify-center items-center px-6 sm:px-16">
+                <h1 className="hero_text text-3xl sm:text-6xl">LANGFELDER</h1>
+                <h1 className="hero_text text-4xl sm:text-7xl">BIO ERDÄPFEL</h1>
+                <p className="hero_text hero_subtitle text-2xl sm:text-5xl text-center">
+                    Beste Waldviertler Qualität seit 1992
+                </p>
             </div>
 
+            <div className="flex-1 flex flex-col justify-center items-center gradient-bg px-6 sm:px-16 pb-6">
+                <InteractiveHoverButton
+                    className="mb-4 hero_button text-mandelweiss sm:text-mandelweisstransp border-mandelweiss sm:border-mandelweisstransp hover:text-mandelweiss hover:border-mandelweiss"
+                    onClick={() => {
+                        const kontaktSection = document.getElementById("kontakt");
+                        if (kontaktSection) {
+                            kontaktSection.scrollIntoView({ behavior: "smooth" });
+                        }
+                        setActive("kontakt");
+                    }}
+                >
+                    Jetzt Kontakt aufnehmen <span>&#8203;</span> <span>&#8203;</span><span>&#8203;</span><span>&#8203;</span><span>&#8203;</span>
+                </InteractiveHoverButton>
 
-
-            <div className={`${styles.paddingX} h-1/2 w-full flex justify-center items-center flex-col gradient-bg`}>
-                <InteractiveHoverButton className="mb-4 hero_button text-mandelweiss sm:text-mandelweisstransp border-mandelweiss sm:border-mandelweisstransp hover:text-mandelweiss hover:border-mandelweiss" onClick={() => {
-                    const kontaktSection = document.getElementById("kontakt");
-                    if (kontaktSection) {
-                        kontaktSection.scrollIntoView({ behavior: "smooth" });
-                    }
-                    setActive("kontakt");
-                }}
-                >Jetzt Kontakt aufnehmen <span>&#8203;</span> <span>&#8203;</span><span>&#8203;</span><span>&#8203;</span><span>&#8203;</span></InteractiveHoverButton>
-
-                <p className="hero_info w-full sm:w-1/3 text-mandelweiss text-center"> Seit Generationen bauen wir in Langfeld Erdäpfel mit Liebe und Sorgfalt an. Regional, nachhaltig und voller Geschmack.</p>
+                <p className="hero_info w-full text-mandelweiss text-center">
+                    Seit Generationen bauen wir in Langfeld Erdäpfel mit Liebe und
+                    <span className="inline sm:block">Sorgfalt an. Regional, nachhaltig und voller Geschmack.</span>
+                </p>
             </div>
         </>
     )

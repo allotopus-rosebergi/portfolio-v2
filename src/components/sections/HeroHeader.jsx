@@ -11,7 +11,7 @@ function HeroHeader() {
     return (
         <>
             <nav
-                className={`${styles.paddingX} py-8 w-full  absolute top-0 z-20 transition-transform duration-300`}
+                className={`${styles.paddingX} py-8 w-full top-0 z-20 transition-transform duration-300`}
             >
                 <div className="max-w-[2000px] mx-auto flex justify-between">
                     <a
