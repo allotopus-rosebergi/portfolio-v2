@@ -57,6 +57,7 @@ function Header() {
                             setActive("");
                             window.scrollTo({ top: 0, behavior: "smooth" });
                         }}
+                        aria-label="Zurück zum Start"
                     >
                         <LogoSvg className="w-2/3 " />
                     </a>
@@ -78,6 +79,7 @@ function Header() {
                     <button
                         className="sm:hidden text-tiefbraun"
                         onClick={() => setDrawerOpen(true)}
+                        aria-label="Menü öffnen"
                     >
                         <TextAlignEnd size={34} />
                     </button>
@@ -98,7 +100,8 @@ function Header() {
             >
                 <div className="w-full flex justify-between items-center p-6">
                     <span className="text-2xl font-bold"> Menü </span>
-                    <button onClick={() => setDrawerOpen(false)}>
+                    <button onClick={() => setDrawerOpen(false)}
+                            aria-label="Menü schließen">
                         <X size={32} className="text-taubengrau" />
                     </button>
                 </div>

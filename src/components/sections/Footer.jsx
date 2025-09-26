@@ -18,15 +18,15 @@ function Footer() {
                     <p> office@lorem-ipsum.at</p>
                 </div>
                 <div className="flex flex-col">
-                    <a href="#/impressum" className="hover:text-goldgelb"> Impressum </a>
-                    <a href="#/datenschutz" className="hover:text-goldgelb"> Datenschutz </a>
+                    <a href="#/impressum" className="hover:text-goldgelb" aria-label="Impressum"> Impressum </a>
+                    <a href="#/datenschutz" className="hover:text-goldgelb" aria-label="Datenschutz"> Datenschutz </a>
                 </div>
                 <div>
                     <p> @2025 Alle Rechte vorbehalten. </p>
-                    <a href="https://marius-lassl.com" target="_blank" className="underline underline-offset-4 hover:text-goldgelb"> Design: Marius Lassl </a>
+                    <a href="https://marius-lassl.com" target="_blank" aria-label="Portfolio Marius Lassl" className="underline underline-offset-4 hover:text-goldgelb"> Design: Marius Lassl </a>
                 </div>
-                <a href="https://www.bio-austria.at" target="_blank" className="w-1/3 sm:w-1/12 h-full">
-                    <img src={bio_logo} alt="Bio Logo" className=""/>
+                <a href="https://www.bio-austria.at" aria-label="Bio Austria" target="_blank" className="w-1/3 sm:w-1/12 h-full">
+                    <img src={bio_logo} alt="Bio Austria Logo" className=""/>
                 </a>
             </div>
         </div>

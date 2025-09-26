@@ -36,28 +36,28 @@ export const navLinks = [
 export const gallery = [
     {
         id: '2',
-        alt: 'Katze am Hof',
+        alt: 'Katze am Hof in Langfeld, Waldviertel',
         img: img2
     },
     {
         id: '1',
-        alt: 'Kühe auf der Weide',
+        alt: 'Kühe auf der Weide in Langfeld, Waldviertel',
         img: img0
     },
     {
         id: '0',
-        alt: 'Kapelle Langfeld',
+        alt: 'Kapelle in Langfeld, Waldviertel',
         img: img1
     },
 
     {
         id: '3',
-        alt: 'Gänse am Teich',
+        alt: 'Gänse am Teich in Langfeld, Waldviertel',
         img: img3
     },
     {
         id: '4',
-        alt: 'Unsere Bio Erdäpfel',
+        alt: 'Unsere Langfelder Bio Erdäpfel, frisch vom Hof',
         img: img4
     },
 ]
@@ -66,6 +66,7 @@ export const potato_range = [
         id: '0',
         special: 'Am beliebtesten!',
         name: 'Ditta',
+        alt: 'Ditta Kartoffel',
         characteristics: 'festkochend und speckig',
         img: img_ditta,
         description: (
@@ -88,6 +89,7 @@ export const potato_range = [
         id: '1',
         special: null,
         name: 'Agria',
+        alt: 'Agria Kartoffel',
         characteristics: 'leicht mehlig bis mehlig',
         img: img_agria,
         description: (
@@ -117,6 +119,7 @@ export const potato_range = [
         id: '2',
         special: null,
         name: 'Hermes',
+        alt: 'Hermes Kartoffel',
         characteristics: 'sehr mehlig',
         img: img_hermes,
         description: (
@@ -142,6 +145,7 @@ export const potato_range = [
         id: '3',
         special: null,
         name: 'Valdivia',
+        alt: 'Valdivia Kartoffel',
         characteristics: 'festkochend und sehr speckig',
         img: img_valdivia,
         description: (

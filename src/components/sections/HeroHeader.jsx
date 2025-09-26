@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { styles } from "../../styles.js";
 import { navLinks } from "../../constants/index.jsx";
 import { ReactComponent as LogoSvg } from "../../assets/svg/logo_vert.svg";
-import {TextAlignEnd, X} from "lucide-react"; // for hamburger & close icons
+import {TextAlignEnd, X} from "lucide-react";
 
 function HeroHeader() {
     const [active, setActive] = useState("");
@@ -21,6 +21,7 @@ function HeroHeader() {
                             setActive("");
                             window.scrollTo({ top: 0, behavior: "smooth" });
                         }}
+                        aria-label="Zurück zum Start"
                     >
                         <LogoSvg className="w-3/5 sm:w-2/3" />
                     </a>
@@ -42,8 +43,9 @@ function HeroHeader() {
                     <button
                         className="sm:hidden text-tiefbraun"
                         onClick={() => setDrawerOpen(true)}
+                        aria-label="Menü öffnen"
                     >
-                        <TextAlignEnd size={34} />
+                        <TextAlignEnd size={34}/>
                     </button>
                 </div>
 
@@ -64,7 +66,7 @@ function HeroHeader() {
             >
                 <div className="w-full flex justify-between items-center p-6">
                     <span className="text-2xl font-bold"> Menü </span>
-                    <button onClick={() => setDrawerOpen(false)}>
+                    <button onClick={() => setDrawerOpen(false)} aria-label="Menü schließen">
                         <X size={32} className="text-taubengrau" />
                     </button>
                 </div>

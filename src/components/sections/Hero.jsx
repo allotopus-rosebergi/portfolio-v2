@@ -1,7 +1,6 @@
 import AnimatedButton from "../AnimatedButton.jsx";
 import {InteractiveHoverButton} from "../InteractiveButton.jsx";
 import {useEffect, useState} from "react";
-import { styles } from '../../styles.js';
 import HeroHeader from "./HeroHeader.jsx";
 import { gsap } from "gsap";
 
@@ -80,8 +79,8 @@ function Hero () {
             <HeroHeader />
 
             <div className="flex-1 flex flex-col justify-center items-center px-6 sm:px-16">
-                <h1 className="hero_text text-3xl sm:text-6xl">LANGFELDER</h1>
-                <h1 className="hero_text text-4xl sm:text-7xl">BIO ERDÄPFEL</h1>
+                <p className="hero_text text-3xl sm:text-6xl rubik-bold text-tiefbraun text-center">LANGFELDER</p>
+                <h1 className="hero_text text-4xl sm:text-7xl text-center">BIO ERDÄPFEL</h1>
                 <p className="hero_text hero_subtitle text-2xl sm:text-5xl text-center">
                     Beste Waldviertler Qualität seit 1992
                 </p>
@@ -101,9 +100,8 @@ function Hero () {
                     Jetzt Kontakt aufnehmen <span>&#8203;</span> <span>&#8203;</span><span>&#8203;</span><span>&#8203;</span><span>&#8203;</span>
                 </InteractiveHoverButton>
 
-                <p className="hero_info w-full text-mandelweiss text-center">
-                    Seit Generationen bauen wir in Langfeld Erdäpfel mit Liebe und
-                    <span className="inline sm:block">Sorgfalt an. Regional, nachhaltig und voller Geschmack.</span>
+                <p className="hero_info w-full sm:w-1/3 text-mandelweiss text-center">
+                    Seit Generationen bauen wir in Langfeld Erdäpfel mit Liebe und Sorgfalt an. Regional, nachhaltig und voller Geschmack.
                 </p>
             </div>
         </>

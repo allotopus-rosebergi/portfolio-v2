@@ -1,5 +1,11 @@
-/*Nunito Sans, Caveat and Rubik*/
-@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+/* Nunito Sans */
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;700;800&display=swap');
+
+/* Rubik */
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@700&display=swap');
+
+/* Caveat */
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400&display=swap');
 
 
 @import "tailwindcss";
@@ -21,7 +27,6 @@
 
     --font-rubik--font-variation-settings: "wght" 700;
 }
-
 
 .nunito-sans-light, :root {
     font-family: "Nunito Sans", sans-serif;
@@ -85,6 +90,7 @@
         font-size: 1.2rem;
     }
 }
+
 
 /*@media (prefers-color-scheme: dark) {
     :root {

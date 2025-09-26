@@ -82,7 +82,8 @@ function Products() {
                                 <DoorSvg className="w-2/3 opacity-65 m-auto" />
                                 <img
                                     src={potato.img}
-                                    alt={potato.name}
+                                    alt={potato.alt}
+                                    loading="lazy"
                                     className="absolute inset-0 w-full h-full object-contain object-center transition-transform duration-300 hover:scale-105 hover:rotate-2 hover:drop-shadow-xl"
                                 />
                             </div>
