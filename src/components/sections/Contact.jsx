@@ -72,13 +72,14 @@ function Contact (){
 
                             <div className="info3 w-full flex flex-col justify-center pt-6 gap-6">
                                 <div>
-                                    <p> Rufen Sie uns an </p>
-                                    <p className="highlight text-lg"> +43 664 1234567 </p>
+                                    <p> Rufen Sie uns an oder schreiben Sie uns auf WhatsApp </p>
+                                    <p className="highlight text-lg"> 0664 7952710 </p>
+                                    <p className="highlight text-lg"> 0664 3200339 </p>
                                 </div>
 
                                 <div>
                                     <p> Senden Sie uns eine E-Mail </p>
-                                    <p className="highlight text-lg"> office@lorem-ipsum.at </p>
+                                    <p className="highlight text-lg"> daniela.semper1@gmx.at </p>
                                 </div>
 
                                 <div>

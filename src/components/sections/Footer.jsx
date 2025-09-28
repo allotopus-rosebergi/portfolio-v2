@@ -14,8 +14,9 @@ function Footer() {
                 </div>
                 <div>
                     <p className="font-bold text-mandelweiss"> Kontakt </p>
-                    <p> +43 664 1234567</p>
-                    <p> office@lorem-ipsum.at</p>
+                    <p> 0664 7952710</p>
+                    <p> 0664 3200339</p>
+                    <p> daniela.semper1@gmx.at</p>
                 </div>
                 <div className="flex flex-col">
                     <a href="#/impressum" className="hover:text-goldgelb" aria-label="Impressum"> Impressum </a>
