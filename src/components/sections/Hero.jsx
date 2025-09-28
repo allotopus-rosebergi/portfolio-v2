@@ -1,4 +1,3 @@
-import AnimatedButton from "../AnimatedButton.jsx";
 import {InteractiveHoverButton} from "../InteractiveButton.jsx";
 import {useEffect, useState} from "react";
 import HeroHeader from "./HeroHeader.jsx";

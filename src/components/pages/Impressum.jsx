@@ -32,7 +32,7 @@ function Impressum() {
                 </section>
 
                 <section>
-                    <p>Bio-Kontrollstelle</p>
+                    <p>Bio-Kontrollstelle:</p>
                     <p className="highlight">AT-BIO-302</p>
                 </section>
 

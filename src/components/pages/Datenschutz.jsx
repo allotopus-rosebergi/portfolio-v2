@@ -31,7 +31,7 @@ function Datenschutz() {
 
                 <section>
                     <p className="highlight">Bildrechte:</p>
-                    <p>Alle auf dieser Website verwendeten Bilder und das Logo wurden von Marius Lassl erstellt. Eine Weiterverwendung, Vervielfältigung oder Veröffentlichung durch Dritte ist nicht gestattet. Die Nutzung ist nur nach ausdrücklicher schriftlicher Zustimmung von Marius Lassl erlaubt. Die Inhalte dürfen vom Website-Betreiber (Maria und Max Mustermann) für den vereinbarten Zweck verwendet werden.</p>
+                    <p>Alle auf dieser Website verwendeten Bilder und das Logo wurden von Marius Lassl erstellt. Eine Weiterverwendung, Vervielfältigung oder Veröffentlichung durch Dritte ist nicht gestattet. Die Nutzung ist nur nach ausdrücklicher schriftlicher Zustimmung von Marius Lassl erlaubt. Die Inhalte dürfen vom Website-Inhaber (Manuel und Daniela Semper) für den vereinbarten Zweck verwendet werden.</p>
                 </section>
 
                 <section>

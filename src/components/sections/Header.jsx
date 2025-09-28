@@ -1,3 +1,5 @@
+import { HashLink } from 'react-router-hash-link';
+
 import React, { useState, useEffect } from "react";
 import { styles } from "../../styles.js";
 import { navLinks } from "../../constants/index.jsx";
@@ -50,8 +52,8 @@ function Header() {
                 }`}
             >
                 <div className="max-w-[2000px] mx-auto w-full flex justify-between ">
-                    <a
-                        href="/langfelder/#/#start"
+                    <HashLink
+                        smooth to="/#start"
                         className="flex items-center gap-2"
                         onClick={() => {
                             setActive("");
@@ -60,7 +62,7 @@ function Header() {
                         aria-label="Zurück zum Start"
                     >
                         <LogoSvg className="w-2/3 " />
-                    </a>
+                    </HashLink>
 
                     <ul className="list-none hidden sm:flex flex-row items-center gap-10">
                         {navLinks.map((link) => (
@@ -71,7 +73,7 @@ function Header() {
                                 } cursor-pointer transition-transform duration-300 hover:scale-125 hover:rotate-2 hover:border-b-[1px]`}
                                 onClick={() => setActive(link.slug)}
                             >
-                                <a href={`/langfelder/#/#${link.slug}`}>{link.title}</a>
+                                <HashLink smooth to={`/#${link.slug}`}>{link.title}</HashLink>
                             </li>
                         ))}
                     </ul>
@@ -94,9 +96,9 @@ function Header() {
             )}
 
             <div
-                className={`fixed top-0 right-0 h-full w-3/4 max-w-xs bg-mandelweiss shadow-lg z-40 transform transition-transform duration-300 ${
-                    drawerOpen ? "translate-x-0" : "translate-x-full"
-                }`}
+                className={`fixed top-0 right-0 h-full w-3/4 max-w-xs bg-mandelweiss shadow-lg z-40 transform transition-transform duration-300
+                ${drawerOpen ? "translate-x-0 visible opacity-100" : "translate-x-full invisible opacity-0"}
+              `}
             >
                 <div className="w-full flex justify-between items-center p-6">
                     <span className="text-2xl font-bold"> Menü </span>
@@ -109,8 +111,8 @@ function Header() {
                 <ul className="flex flex-col gap-2 p-6">
                     {navLinks.map((link) => (
                         <li key={link.id}>
-                            <a
-                                href={`/langfelder/#/#${link.slug}`}
+                            <HashLink
+                                smooth to={`/#${link.slug}`}
                                 className={`${
                                     active === link.slug ? "text-tiefbraun" : "text-tiefbraun"
                                 } block text-4xl`}
@@ -120,7 +122,7 @@ function Header() {
                                 }}
                             >
                                 {link.title}
-                            </a>
+                            </HashLink>
                         </li>
                     ))}
                 </ul>
