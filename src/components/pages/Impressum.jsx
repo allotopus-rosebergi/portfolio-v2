@@ -9,7 +9,6 @@ function Impressum() {
                 <h2> Impressum </h2>
             </div>
             <div className={`p-6 sm:p-16 w-full sm:w-1/2 m-auto flex flex-col gap-6`}>
-
                 <section>
                     <p> Familie Semper </p>
                     <p className="highlight"> Manuel und Daniela Semper </p>
