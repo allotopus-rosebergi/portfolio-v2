@@ -9,42 +9,33 @@ function Impressum() {
                 <h2> Impressum </h2>
             </div>
             <div className={`p-6 sm:p-16 w-full sm:w-1/2 m-auto flex flex-col gap-6`}>
-                <p>Angaben gemäß § 5 ECG und § 25 MedienG</p>
 
                 <section>
-                    <p> Betriebsname / Hofname: </p>
-                    <p className="highlight"> Erdäpfelhof Mustermann </p>
-                </section>
-
-                <section>
-                    <p>Inhaber:</p>
-                    <p className="highlight">Maria und Max Mustermann</p>
+                    <p> Familie Semper </p>
+                    <p className="highlight"> Manuel und Daniela Semper </p>
                 </section>
 
                 <section>
                     <p>Adresse:</p>
                     <p className="highlight">
-                        Musterstraße 12<br/>
-                        A-1234 Musterstadt<br/>
+                        Langfeld 27<br/>
+                        A-3970 Weitra<br/>
                         Österreich
                     </p>
                 </section>
 
                 <section>
                     <p>Kontakt:</p>
-                    <p className="highlight">Telefon: +43 (0)123 456 789</p>
-                    <p className="highlight">E-Mail: info@mustergut.at</p>
+                    <p className="highlight">Telefon: +43 (0)664 7952710</p>
+                    <p className="highlight">Telefon: +43 (0)664 3200339</p>
+                    <p className="highlight">E-Mail: daniela.semper1@gmx.at</p>
                 </section>
 
                 <section>
-                    <p>Behörde gemäß ECG:</p>
-                    <p className="highlight">Bezirkshauptmannschaft Musterstadt</p>
+                    <p>Bio-Kontrollstelle</p>
+                    <p className="highlight">AT-BIO-302</p>
                 </section>
 
-                <section>
-                    <p>Mitgliedschaften:</p>
-                    <p className="highlight">Mitglied der Landwirtschaftskammer [Bundesland]</p>
-                </section>
 
                 <div className="w-full flex flex-row justify-center mt-8 sm:mt-16">
                     <InteractiveHoverButton className="text-tiefbraun border-tiefbraun"onClick={() => (window.location.href = "#/")}> Zurück zum Start <span>&#8203;</span> <span>&#8203;</span><span>&#8203;</span><span>&#8203;</span><span>&#8203;</span></InteractiveHoverButton>

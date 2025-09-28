@@ -16,7 +16,7 @@ function Datenschutz() {
 
                 <section>
                     <p className="highlight">Verantwortlicher:</p>
-                    <p>Maria und Max Mustermann, Erdäpfelhof Mustermann, Musterstraße 12, A-1234 Musterstadt, Österreich</p>
+                    <p>Manuel und Daniela Semper, Langfeld 27, A-3970 Weitra, Österreich</p>
                 </section>
 
                 <section>

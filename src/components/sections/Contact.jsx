@@ -68,7 +68,7 @@ function Contact (){
                         <div className="w-full sm:w-1/2 flex flex-col justify-center px-6">
                             <h2 className="title3"> Wie kommen Sie zu unseren Erdäpfeln? </h2>
                             <p className="para3"> Unsere Erdäpfel bekommen Sie direkt bei uns am Hof in Langfeld.
-                                Im Verkaufsstand können Sie die Erdäpfel mittels Selbstbedienung kaufen. Geöffnet ist der Verkaufsstand von Montag bis Sonntag, ausgenommen bei Frost. Bei größeren Mengen bitten wir Sie um Voranmeldung. </p>
+                                Im Verkaufsstand können Sie die Erdäpfel mittels Selbstbedienung kaufen. Geöffnet ist der Verkaufsstand von Montag bis Sonntag. Bei Frost sind die Erdäpfel im Haus erhältlich. Für größere Mengen bitten wir um Voranmeldung. </p>
 
                             <div className="info3 w-full flex flex-col justify-center pt-6 gap-6">
                                 <div>

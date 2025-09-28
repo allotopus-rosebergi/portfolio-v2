@@ -1,6 +1,7 @@
 import {ReactComponent as LogoSvg} from "../../assets/svg/logo_full_light.svg"
 import bio_logo from "../../assets/img/bio_logo.png"
 import {styles} from "../../styles.js";
+import eu_logo from "../../assets/img/csm_EU-Bio-Siegel_3858d1fa89.jpg.webp"
 
 function Footer() {
     return (
@@ -26,9 +27,14 @@ function Footer() {
                     <p> @2025 Alle Rechte vorbehalten. </p>
                     <a href="https://marius-lassl.com" target="_blank" aria-label="Portfolio Marius Lassl" className="underline underline-offset-4 hover:text-goldgelb"> Design: Marius Lassl </a>
                 </div>
-                <a href="https://www.bio-austria.at" aria-label="Bio Austria" target="_blank" className="w-1/3 sm:w-1/12 h-full">
-                    <img src={bio_logo} alt="Bio Austria Logo" className=""/>
-                </a>
+                <div className="flex flex-col w-1/3 sm:w-1/12 gap-2">
+                    <a href="https://www.bio-austria.at" aria-label="Bio Austria" target="_blank" className="h-full">
+                        <img src={bio_logo} alt="Bio Austria Logo" className=""/>
+                    </a>
+
+                    <img src={eu_logo} alt="Bio Austria Logo" className="w-full"/>
+                </div>
+
             </div>
         </div>
     )
