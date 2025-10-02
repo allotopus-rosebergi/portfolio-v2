@@ -1,69 +1,90 @@
 import {styles} from "../../styles.js";
-import {useEffect} from "react";
 import {SplitText} from "gsap/SplitText";
-import {gsap} from "gsap";
+import {skills} from "../../constants/index.jsx"
+import { gsap } from "gsap";
+import {ScrollTrigger} from "gsap/ScrollTrigger";
+import {TextPlugin} from "gsap/TextPlugin";
+import {useEffect} from "react";
+gsap.registerPlugin(TextPlugin, ScrollTrigger);
 
-function Contact (){
+
+function Skills (){
     useEffect(() => {
         document.fonts.ready.then(() => {
-            const split = SplitText.create('.info3', {type: "lines", mask:"lines"});
+            const split = new SplitText(".skillTitle", {
+                type: "lines",
+                mask: "lines",
+                linesClass: "lineChild"
+            });
 
-            gsap.fromTo(split.lines,
-                {opacity: 0, y: 20},
-                {
-                    opacity: 1,
-                    y: 0,
-                    duration: 0.3,
-                    delay: 0.5,
-                    stagger: 0.2,
-                    scrollTrigger: {
-                        trigger: ".para3",
-                        start: "top 80%",
-                        end: "top 20%",
-                    }
+            gsap.from(split.lines, {
+                duration: 1,
+                y: 100,
+                autoAlpha: 0,
+                ease: "expo.out",
+                stagger: 0.2,
+                scrollTrigger: {
+                    trigger: ".skillTitle",
+                    start: "top 95%",
                 }
-            );
+            });
 
-            gsap.fromTo(".para3",
-                {opacity: 0, y: 20},
-                {
-                    opacity: 1,
-                    y: 0,
-                    duration: 0.3,
-                    delay: 0.3,
-                    stagger: 0.02,
-                    scrollTrigger: {
-                        trigger: ".para3",
-                        start: "top 80%",
-                        end: "top 20%",
-                    }
-                }
-            );
 
-            gsap.fromTo('.title3',
-                {opacity: 0, y: 20},
-                {
-                    opacity: 1,
-                    y: 0,
-                    ease: "power1.inOut",
-                    scrollTrigger: {
-                        trigger: ".para3",
-                        start: "top 80%",
-                        end: "top 20%",
-                    }
+            ScrollTrigger.matchMedia({
+                "(min-width: 640px)": function() {
+                    gsap.fromTo(".skill",
+                        { y: 0, opacity: 0 },
+                        {
+                            opacity: 1,
+                            y: (i) => i === 0 ? -50 : i === 1 ? -25 : 50,
+
+                            stagger: 0.05,
+                            scrollTrigger: {
+                                trigger: ".skills-wrapper",
+                                scrub: true,
+                                start: "top 95%",
+                                end: "top 20%",
+                            }
+                        }
+                    );
+                },
+                "(max-width: 639px)": function() {
+                    gsap.fromTo(".skill",
+                        { y: 0 },
+                        {
+                            y: () => -35,
+                            scrollTrigger: {
+                                trigger: ".skills-wrapper",
+                                scrub: true,
+                                start: "top 95%",
+                                end: "top 30%",
+                            }
+                        }
+                    );
                 }
-            );
+
+            });
+
         });
     }, []);
     return(
         <>
-            <section id="skills">
-                <div  className={`${styles.margin} mt-8 sm:my-16`} >
-                    Skills
+            <section id="skills" className="py-8">
+                <div  className={`${styles.margin} my-8 sm:my-16`} >
+                    <h2 className="text-center pb-[6rem] skillTitle"> Meine Stärken </h2>
+                    <div className="flex flex-col sm:flex-row gap-12 skills-wrapper">
+                        {skills.map((skill) => (
+                            <div key={skill.id} className="w-full sm:w-1/3 skill">
+                                <h3>{skill.number}</h3>
+                                <h3>{skill.title}</h3>
+                                <p className="text-gray">{skill.description}</p>
+                            </div>
+                        ))}
+                    </div>
                 </div>
             </section>
         </>
     )
 }
 
-export default Contact
+export default Skills

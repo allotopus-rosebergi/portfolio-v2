@@ -1,77 +1,30 @@
-/* Nunito Sans */
-@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;700;800&display=swap');
-
-/* Rubik */
-@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@700&display=swap');
-
-/* Caveat */
-@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Sora:wght@100..800&display=swap');
 
 @import "tailwindcss";
 
 @theme {
-    /* COLORS */
-    --color-tiefbraun: #2F2425;
-    --color-taubengrau: #8B8A8A;
-    --color-goldgelb: #E1A62B;
-    --color-mandelweiss: #FBF2E8;
-    --color-mandelweisstransp: #FBF2E8BB;
+    --color-dark:#000000;
+    --color-gray:#B6B6B6;
+    --color-light:#FFFFFF;
+    --color-accent:#DF8116;
 
-    --color-goldgelbhighlight: #f4c462;
-
-    /* FONTS */
-    --font-rubik: "Rubik", sans-serif;
-    --font-nunito: "Nunito Sans", sans-serif;
-    --font-caveat: "Caveat", cursive;
-
-    --font-rubik--font-variation-settings: "wght" 700;
+    --font-sora: "Sora", sans-serif;
+    --font-jetbrains-mono: "JetBrains Mono", monospace;
 }
 
-.nunito-sans-light, :root {
-    font-family: "Nunito Sans", sans-serif;
+.sora-light, :root {
+    font-family: "Sora", sans-serif;
     font-optical-sizing: auto;
-    font-weight: 300;
+    font-weight: 400;
     font-style: normal;
-    font-variation-settings:
-            "wdth" 100,
-            "YTLC" 500;
+    color: var(--color-gray);
 }
-.lineChild {
-    overflow: hidden;
-    display: block;
-    line-height: 1.1em;
-}
-
-.nunito-sans-extrabold, .highlight {
-    font-family: "Nunito Sans", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 800;
-    font-style: normal;
-    font-variation-settings:
-            "wdth" 100,
-            "YTLC" 500;
-}
-
-.rubik-bold {
-    font-family: "Rubik", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 700;
-    font-style: normal;
-}
-
-.caveat-regular {
-     font-family: "Caveat", cursive;
-     font-optical-sizing: auto;
-     font-weight: 400;
-     font-style: normal;
- }
 
 :root {
   color-scheme: light;
 
-  color: var(--color-taubengrau);
-  background-color: var(--color-mandelweiss);
+  color: var(--color-gray);
+  background-color: var(--color-dark);
 
     font-size: 1rem;
 
@@ -91,78 +44,63 @@
     }
 }
 
-
-/*@media (prefers-color-scheme: dark) {
-    :root {
-        color: var(--color-mandelweiss);           !* text *!
-        background-color: var(--color-tiefbraun)
-    }
-}*/
-
 h1 {
-    font-family: "Rubik", sans-serif;
+    font-family: "Sora", sans-serif;
     font-optical-sizing: auto;
     font-weight: 700;
     font-style: normal;
-
-    color: var(--color-tiefbraun);
+    font-size: 5rem;
+    color: var(--color-light);
 }
 
 h2 {
-    font-family: "Rubik", sans-serif;
+    font-family: "Sora", sans-serif;
     font-optical-sizing: auto;
     font-weight: 700;
     font-style: normal;
     font-size: 3rem;
+    color: var(--color-light);
+
     line-height: 1.1;
-    color: var(--color-tiefbraun);
-    padding-bottom: 1rem;
 }
 
 h3 {
-    font-family: "Rubik", sans-serif;
+    font-family: "Sora", sans-serif;
     font-optical-sizing: auto;
     font-weight: 700;
     font-style: normal;
     font-size: 2rem;
-    line-height: 0.3;
-    color: var(--color-tiefbraun);
-    padding-bottom: 1rem;
+    color: var(--color-light);
 }
 
 
-.hero_subtitle {
-    font-family: "Caveat", cursive;
-    font-optical-sizing: auto;
-    font-weight: 400;
-    font-style: normal;
-    color: var(--color-tiefbraun);
-}
 
 .highlight {
-    color: var(--color-tiefbraun);
-    font-family: "Nunito Sans", sans-serif;
+    color: var(--color-accent);
+    font-family: "Sora", sans-serif;
     font-optical-sizing: auto;
-    font-weight: 800;
+    font-weight: 500;
     font-style: normal;
-    font-variation-settings:
-            "wdth" 100,
-            "YTLC" 500;
 }
 
-.cursive_highlight {
-    font-family: "Caveat", cursive;
+.mono, h4{
+    font-family: "JetBrains Mono", monospace;
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
-    color: var(--color-goldgelb);
-    font-size: 1.5rem;
 }
 
-.gradient-bg {
-    background: #2F2425;
-    background: -webkit-linear-gradient(0deg, rgba(47, 36, 37, 0.45) 32%, rgba(0, 0, 0, 0) 100%);
-    background: -moz-linear-gradient(0deg, rgba(47, 36, 37, 0.45) 32%, rgba(0, 0, 0, 0) 100%);
-    background: linear-gradient(0deg, rgba(47, 36, 37, 0.45) 32%, rgba(0, 0, 0, 0) 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#2F2425", endColorstr="#000000", GradientType=0);
+h4 {
+    color: var(--color-light);
+    font-weight: bold;
+    font-size: 1.2rem;
+    padding-top: 1.5rem;
+}
+
+.clip-triangle-top {
+    clip-path: polygon(0 100%, 100% 0, 100% 100%, 0% 100%);
+}
+
+.clip-triangle-bottom {
+    clip-path: polygon(100% 0, 0 100%, 0 0, 100% 0);
 }
