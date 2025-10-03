@@ -31,12 +31,12 @@ function Skills (){
 
 
             ScrollTrigger.matchMedia({
-                "(min-width: 640px)": function() {
+                "(min-width: 1024px)": function() {
                     gsap.fromTo(".skill",
                         { y: 0, opacity: 0 },
                         {
                             opacity: 1,
-                            y: (i) => i === 0 ? -50 : i === 1 ? -25 : 50,
+                            y: (i) => i === 0 ? -90 : i === 1 ? -20 : 70,
 
                             stagger: 0.05,
                             scrollTrigger: {
@@ -48,7 +48,7 @@ function Skills (){
                         }
                     );
                 },
-                "(max-width: 639px)": function() {
+                "(max-width: 1023px)": function() {
                     gsap.fromTo(".skill",
                         { y: 0 },
                         {
@@ -72,9 +72,9 @@ function Skills (){
             <section id="skills" className="py-8">
                 <div  className={`${styles.margin} my-8 sm:my-16`} >
                     <h2 className="text-center pb-[6rem] skillTitle"> Meine Stärken </h2>
-                    <div className="flex flex-col sm:flex-row gap-12 skills-wrapper">
+                    <div className="flex flex-col lg:flex-row gap-12 skills-wrapper">
                         {skills.map((skill) => (
-                            <div key={skill.id} className="w-full sm:w-1/3 skill">
+                            <div key={skill.id} className="w-full lg:w-1/3 skill">
                                 <h3>{skill.number}</h3>
                                 <h3>{skill.title}</h3>
                                 <p className="text-gray">{skill.description}</p>

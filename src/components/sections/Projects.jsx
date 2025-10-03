@@ -35,7 +35,7 @@ function Projects (){
 
 
             gsap.fromTo(".project",
-                { y: 100, opacity: 0, scale: 0.96 },
+                { y: 100, opacity: 0, scale: 0.93 },
                 {
                     y: 0,
                     opacity: 1,
@@ -61,7 +61,7 @@ function Projects (){
                     <h2 className="text-center mb-6 projectTitle"> Ausgewählte Arbeiten </h2>
                     <p className="text-center mb-[4rem] projectTitle"> Um näheres zu erfahren, lässt sich jedes Projekt anklicken. </p>
 
-                    <div className="w-full sm:w-3/4 mx-auto grid grid-cols-1 sm:grid-cols-2 gap-16 projectWrapper">
+                    <div className="w-full lg:w-3/4 mx-auto grid grid-cols-1 sm:grid-cols-2 gap-16 projectWrapper">
                         {projects.map((project) => (
                             <Link
                                 to={`/${project.slug}`}

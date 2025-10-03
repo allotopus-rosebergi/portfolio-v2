@@ -59,8 +59,8 @@ function Hero () {
         <>
             <Navigation />
 
-            <div className="flex flex-col sm:flex-row h-screen ">
-                <div className="flex-1 flex flex-col justify-center px-6 sm:px-16 w-full sm:w-1/2">
+            <div className="flex flex-col lg:flex-row min-h-screen w-full gap-16 lg:gap-0">
+                <div className="flex-1 flex flex-col justify-center px-6 sm:px-16 w-full lg:w-1/2">
                     <p className="hero_text text-light text-left mono w-full">GRAFIKDESIGN | WEBENTWICKLUNG | FOTOGRAFIE</p>
                     <h1 className="hero_text text-4xl sm:text-9xl text-left w-full py-4">Marius Lassl</h1>
                     <p className="hero_info text-left w-full">
@@ -82,7 +82,9 @@ function Hero () {
                         </AnimatedButton>
                     </div>
                 </div>
-                <img src={PortraitImg} alt="Marius Lassl Portrait" className="w-full sm:w-1/2 px-0 sm:px-8 object-contain h-full object-bottom"/>
+                <div className="w-full lg:w-1/2 flex-1 flex justify-center items-end">
+                    <img src={PortraitImg} alt="Marius Lassl Portrait" className="w-full object-contain h-full object-bottom"/>
+                </div>
             </div>
         </>
     )

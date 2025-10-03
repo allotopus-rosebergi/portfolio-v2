@@ -12,7 +12,7 @@ function Navigation() {
     return (
         <>
             <nav
-                className={`${styles.paddingX} py-8 w-full top-0 z-20 transition-transform duration-300 relative sm:absolute flex flex-row justify-end sm:justify-center`}
+                className={`${styles.paddingX} py-8 w-full top-0 z-20 transition-transform duration-300 relative lg:absolute flex flex-row justify-end sm:justify-center`}
             >
                     <ul className="list-none hidden sm:flex flex-row items-center gap-10">
                         {navLinks.map((link) => (

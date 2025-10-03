@@ -34,14 +34,21 @@ function Contact (){
                 <div  className={`${styles.padding}`} >
                     <h2 className="text-center mb-6 contactTitle"> Interesse geweckt? </h2>
                     <p className="text-center mb-[4rem] text-gray contactTitle"> Ich bin immer offen für ein neues, aufregendes Projekt!  </p>
-                    <div className="w-full flex flex-col justify-center items-center contactTitle">
-                            <div className="flex items-center gap-4">
-                                <span className="text-gray">Mobil:</span><span> +43 664 5859370</span>
-                                <CopyButton content="+43 664 5859370" size="md"/>
+                    <div className="w-full flex flex-col justify-center items-center gap-8 contactTitle">
+                            <div className="flex flex-col sm:flex-row items-center sm:gap-4">
+                                <span className="text-gray">Mobil:</span>
+                                <div className="flex items-center flex-flow">
+                                    <span> +43 664 5859370</span>
+                                    <CopyButton content="+43 664 5859370" size="md"/>
+                                </div>
                             </div>
-                            <div className="flex items-center gap-4">
-                                <span className="text-gray">Email:</span><span> office@marius-lassl.com</span>
-                                <CopyButton content="office@marius-lassl.com" size="md"/>
+
+                            <div className="flex flex-col sm:flex-row items-center sm:gap-4">
+                                <span className="text-gray">Email:</span>
+                                <div className="flex items-center flex-flow">
+                                    <span> office@marius-lassl.com</span>
+                                    <CopyButton content="office@marius-lassl.com" size="md"/>
+                                </div>
                             </div>
                     </div>
                 </div>
