@@ -5,36 +5,34 @@ import { styles } from "../../styles.js";
 import { navLinks } from "../../constants/index.jsx";
 import {TextAlignEnd, X} from "lucide-react";
 
-function Navigation() {
+function Navigation({color = 'text-light', alignment = 'sm:justify-center'}) {
     const [active, setActive] = useState("");
     const [drawerOpen, setDrawerOpen] = useState(false);
 
     return (
         <>
             <nav
-                className={`${styles.paddingX} py-8 w-full top-0 z-20 transition-transform duration-300 relative lg:absolute flex flex-row justify-end sm:justify-center`}
+                className={`${styles.paddingX} py-8 w-full top-0 z-20 transition-transform duration-300 relative lg:absolute flex flex-row justify-end ${alignment}`}
             >
-                    <ul className="list-none hidden sm:flex flex-row items-center gap-10">
-                        {navLinks.map((link) => (
-                            <li
-                                key={link.id}
-                                className={`${
-                                    active === link.slug ? "text-light" : "text-light"
-                                } cursor-pointer font-bold`}
-                                onClick={() => setActive(link.slug)}
-                            >
-                                <HashLink smooth to={`/#${link.slug}`}><RollingText text={link.title}></RollingText></HashLink>
-                            </li>
-                        ))}
-                    </ul>
+                <ul className="list-none hidden sm:flex flex-row items-center gap-10">
+                    {navLinks.map((link) => (
+                        <li
+                            key={link.id}
+                            className={`${color} cursor-pointer font-bold`}
+                            onClick={() => setActive(link.slug)}
+                        >
+                            <HashLink smooth to={`/#${link.slug}`}><RollingText text={link.title}></RollingText></HashLink>
+                        </li>
+                    ))}
+                </ul>
 
-                    <button
-                        className="sm:hidden "
-                        onClick={() => setDrawerOpen(true)}
-                        aria-label="Menü öffnen"
-                    >
-                        <TextAlignEnd size={34}/>
-                    </button>
+                <button
+                    className="sm:hidden "
+                    onClick={() => setDrawerOpen(true)}
+                    aria-label="Menü öffnen"
+                >
+                    <TextAlignEnd size={34}/>
+                </button>
             </nav>
 
             {drawerOpen && (

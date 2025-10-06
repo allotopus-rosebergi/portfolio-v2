@@ -15,7 +15,7 @@ const ProjectsDetailed = () => {
     return (
         <>
             <div className="flex-1">
-                <Navigation />
+                <Navigation color={project.navcolor} alignment={project.alignment} />
 
                 <img src={project.background} alt={project.alt} className="h-[80vh] w-full object-cover object-center"/>
 

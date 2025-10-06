@@ -1,15 +1,17 @@
 import cover_blacktie from "../assets/projects/blacktie/Blacktie_cover.webp"
-import bg_blacktie from "../assets/projects/blacktie/Blacktie_Tickets.webp"
+import bg_blacktie from "../assets/projects/blacktie/Free_Ticket_Mockup_3.webp"
 import BlacktieCS from "../components/casestudies/BlacktieCS.jsx"
 
 import cover_langfelder from "../assets/projects/langfelder/Langfelder_lq.webp"
 import bg_langfelder from "../assets/projects/langfelder/bg-2.webp"
+import LangfelderCS from "../components/casestudies/LangfelderCS.jsx"
 
 import cover_mangrove from "../assets/projects/mangrove/can_front.webp"
 import bg_mangrove from "../assets/projects/mangrove/bg_mangrove.webp"
 
 import cover_wondrousnature from "../assets/projects/wondrousnature/cover_wondrousnature.webp"
 import bg_wondrousnature from "../assets/projects/wondrousnature/bg_wondrousnature.webp"
+import WondrousNatureCS from "../components/casestudies/WondrousNatureCS.jsx";
 
 import cover_natureswatch from "../assets/projects/natureswatch/natureswatch_mockup_cover.webp"
 import bg_natureswatch from "../assets/projects/natureswatch/natureswatch_mockup.webp"
@@ -40,23 +42,129 @@ export const skills = [
         id: '0',
         number: '01',
         title: 'Grafikdesign',
-        description: 'Ich erstelle vielseitige Grafiken für Poster, Eintrittskarten, Verpackungen und mehr – immer mit klarem Stil und Liebe zum Detail.'
+        description: 'Ich entwerfe Logos, Grafiken und Layouts für Printprodukte wie Poster oder Verpackungen und sorge für ein stimmiges und professionelles Erscheinungsbild.'
     },
     {
         id: '1',
         number: '02',
         title: 'Web und Frontend',
-        description: 'Ich entwickle individuelle Websites und Layouts, verfeinere sie mit Animationen und optimiere sie für Suchmaschinen, damit Design und Sichtbarkeit Hand in Hand gehen.'
+        description: 'Ich entwickle individuelle Websites und App-Oberflächen, verfeinere sie mit Animationen und optimiere sie für Suchmaschinen, damit Design und Sichtbarkeit Hand in Hand gehen.'
     },
     {
         id: '2',
         number: '03',
         title: 'Fotografie',
-        description: 'Ich erstelle und bearbeite Fotos, um Projekten einen persönlichen, einzigartigen Touch zu geben.'
+        description: 'Ich erstelle und bearbeite Fotos, um Projekten einen persönlichen, einzigartigen Touch zu verleihen.'
     }
 ]
 
 export const projects = [
+    {
+        id: '0',
+        title: 'Langfelder Bio Erdäpfel',
+        slug: 'langfelder-bio',
+
+        img: cover_langfelder,
+        alt: 'Langfelder Bio Erdäpfel',
+
+        background: bg_langfelder,
+
+        tags: 'Webentwicklung, SEO, Markenidentität',
+
+        year: '2025',
+        problem: 'Schon seit 1992 werden in Langfeld Erdäpfel mit Bio-Qualität von der Familie Semper, ehemals Lassl, angebaut und vertrieben. Nach über drei Jahrzehnten sollte diese Leidenschaft auch online sichtbar werden, um neuen Kunden einen Einblick in die Familie und ihre Bio-Erdäpfel zu geben.',
+        solution: 'Es entstand ein vollständiges visuelles Erscheinungsbild mit Logo, Farb- und Schriftkonzept sowie einer Website, die durch gezielte Fotografie von Hof, Familie und Umgebung Authentizität und Vertrauen vermittelt.',
+        tools: [
+            {category: 'Webentwicklung', tool: 'ReactJS, Vite, TailwindCSS, GSAP'},
+            {category: 'Logo und Bildbearbeitung', tool: 'Adobe Photoshop und Illustrator'},
+            {category: 'Webentwicklung', tool: 'HTML, CSS, JavaScript'},
+            {category: 'Prototypenentwicklung', tool: 'Figma'},
+        ],
+        links: [
+            { url: "https://langfelder-biokartoffel.at", label: "Webseite | Langfelder Bio Erdäpfel"},
+        ],
+
+        casestudy: LangfelderCS,
+    },
+
+
+
+    {
+        id: '2',
+        title: 'Mangrove Energy',
+        slug: 'mangrove-energy',
+        navcolor: 'text-dark',
+
+        img: cover_mangrove,
+        alt: 'Mangrove Energy Drink Dose',
+
+        background: bg_mangrove,
+
+        tags: 'Verpackungsdesign, Markenidentität, Wordpress',
+
+        year: '2022',
+        problem: 'Im Rahmen einer Projektarbeit sollte eine konsistente und wiedererkennbare Markenidentität mit Logo, Leitbild und Webauftritt entwickelt werden.',
+        solution: 'Mit Mangrove Energy entstand eine energiegeladene Marke für Menschen mit großen Zielen. Die handillustrierte Schlange, kräftige Gelbtöne und die holzähnliche Hintergrundtextur schaffen ein starkes Erscheinungsbild. Dazu wurde ein WordPress-Onlineshop mit WooCommerce umgesetzt.',
+        tools: [
+            {category: 'Webentwicklung', tool: 'WordPress mit WooCommerce'},
+            {category: 'Prototypenentwicklung', tool: 'Adobe XD'},
+            {category: 'Logo und Verpackungsdesign', tool: 'Adobe PhotoShop und Illustrator'},
+        ],
+    },
+
+    {
+        id: '1',
+        title: 'Black Tie Clubbing 2024',
+        slug: 'black-tie-clubbing-2024',
+        alignment: 'lg:px-48 sm:justify-start',
+
+        img: cover_blacktie,
+        alt: 'Black Tie Clubbing 2024',
+
+        background: bg_blacktie,
+
+        tags: 'Eventmarketing, Printdesign',
+
+        year: '2024',
+        problem: 'Das Maturaclubbing der HTL Krems Standort Zwettl, benötigte eine effektive Werbung, um möglichst viele Besucher zu erreichen und das Event im regionalen Raum sichtbar zu machen.',
+        solution: 'Ein durchdachtes Werbekonzept wurde entwickelt, inklusive Plakaten, Flyern, Eintrittskarten und vier gezielten Instagram-Posts, die über das Event, die Sponsoren, den Dresscode und die Tombolapreise informieren.',
+        tools: [
+            {category: 'Grafikdesign', tool: 'Adobe Photoshop und InDesign'},
+        ],
+        links: [
+            { url: "https://www.noen.at/zwettl/clubbing-maturaevent-der-htl-in-zwettl-ein-voller-erfolg-448564507", label: "NÖN Beitrag | Maturaevent der HTL in Zwettl ein voller Erfolg"},
+            { url: "https://www.instagram.com/maturaclubbing.htlzwettl/", label: "Instagram | maturaclubbing.htlzwettl" },
+        ],
+
+        casestudy: BlacktieCS,
+    },
+
+    {
+        id: '3',
+        title: 'Wondrous Nature',
+        slug: 'wondrous-nature',
+        navcolor: 'text-dark',
+
+        img: cover_wondrousnature,
+        alt: 'Offenes Buch Wondrous Nature',
+
+        background: bg_wondrousnature,
+
+        tags: 'Grafikdesign, Layoutgestaltung, Fotografie',
+
+        year: '2025',
+        problem: 'Wissenschaftliche Inhalte über ungewöhnliche Lebewesen werden oft trocken oder rein faktisch präsentiert. Es fehlte ein Magazinformat, das komplexes Wissen ansprechend aufbereitet, visuell fesselt und die Lesenden motiviert, sich mit den Inhalten zu beschäftigen.',
+        solution: 'Wondrous Nature ist ein visuell gestaltetes Magazin, in dem jedes Kapitel ein einzelnes Tier oder eine Pflanze in den Fokus stellt. Große, eindrucksvolle Bilder werden mit klar strukturierten Textlayouts kombiniert, sodass Wissen ästhetisch und verständlich vermittelt wird.',
+        tools: [
+            {category: 'Gestaltung', tool: 'Adobe InDesign und Photoshop'},
+        ],
+
+        casestudy: WondrousNatureCS,
+    },
+]
+
+
+export const projects_old = [
     {
         id: '0',
         title: 'Langfelder Bio Erdäpfel',

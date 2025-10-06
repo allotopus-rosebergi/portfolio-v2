@@ -53,7 +53,7 @@ function AnimatedButton({
     const classes = classNames(
         "button relative px-12 py-1.5 border duration-300 overflow-hidden font-sans",
         {
-            "border-light text-light hover:text-dark hover:font-bold": primary && !outline,
+            "border-light text-light hover:text-dark hover:font-bold  backdrop-blur-sm": primary && !outline,
             "border-color-gray bg-color-gray text-color-light": secondary && !outline,
             "text-color-light": simple_w && !outline,
             "text-color-dark": simple_b && !outline,

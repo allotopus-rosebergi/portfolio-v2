@@ -34,7 +34,7 @@ function Contact (){
                 <div  className={`${styles.padding}`} >
                     <h2 className="text-center mb-6 contactTitle"> Interesse geweckt? </h2>
                     <p className="text-center mb-[4rem] text-gray contactTitle"> Ich bin immer offen für ein neues, aufregendes Projekt!  </p>
-                    <div className="w-full flex flex-col justify-center items-center gap-8 contactTitle">
+                    <div className="w-full flex flex-col justify-center items-center gap-8 sm:gap-0 contactTitle">
                             <div className="flex flex-col sm:flex-row items-center sm:gap-4">
                                 <span className="text-gray">Mobil:</span>
                                 <div className="flex items-center flex-flow">

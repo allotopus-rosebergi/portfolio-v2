@@ -6,7 +6,7 @@
     --color-dark:#000000;
     --color-gray:#B6B6B6;
     --color-light:#FFFFFF;
-    --color-accent:#DF8116;
+    --color-accent:#82AC66;
 
     --font-sora: "Sora", sans-serif;
     --font-jetbrains-mono: "JetBrains Mono", monospace;
@@ -38,6 +38,10 @@
     overflow-x: hidden;
 }
 
+html, body {
+    background-color: var(--color-dark) !important;
+}
+
 @media (min-width: 1800px) {
     :root {
         font-size: 1.2rem;
@@ -61,6 +65,7 @@ h2 {
     font-size: 3rem;
     color: var(--color-light);
 
+    padding-top: 4px;
     line-height: 1.1;
 }
 

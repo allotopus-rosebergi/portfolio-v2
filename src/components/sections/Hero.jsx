@@ -1,3 +1,5 @@
+'use client';
+import { motion } from 'framer-motion';
 import {useEffect, useState} from "react";
 import Navigation from "./Navigation.jsx";
 import { gsap } from "gsap";
@@ -59,6 +61,27 @@ function Hero () {
         <>
             <Navigation />
 
+            <motion.div
+                initial={{ y: '100%' }}
+                animate={{ y: '-100%' }}
+                transition={{
+                    duration: 0.8,
+                    ease: [0.83, 0, 0.17, 1],
+                }}
+                className="absolute bottom-0 left-0 w-full h-full bg-dark  z-10"
+            />
+
+            <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{
+                    delay: 0.9,
+                    duration: 0.6,
+                    ease: 'easeOut',
+                }}
+                className="relative z-10 text-center"
+            >
+
             <div className="flex flex-col lg:flex-row min-h-screen w-full gap-16 lg:gap-0">
                 <div className="flex-1 flex flex-col justify-center px-6 sm:px-16 w-full lg:w-1/2">
                     <p className="hero_text text-light text-left mono w-full">GRAFIKDESIGN | WEBENTWICKLUNG | FOTOGRAFIE</p>
@@ -66,7 +89,7 @@ function Hero () {
                     <p className="hero_info text-left w-full">
                         Ich kombiniere Grafikdesign, Webentwicklung und Fotografie, um Projekte zu schaffen, die individuell, klar und von hoher Qualität sind. Dabei lasse ich mich von der Vielfalt der Natur inspirieren und lege Wert auf Details, die jedes Werk einzigartig machen.
                     </p>
-                    <div className="w-full pt-8 flex  justify-center sm:justify-start">
+                    <div className="w-full pt-8 flex justify-start">
                         <AnimatedButton
                             primary rounded
                             className="hero_button"
@@ -86,6 +109,7 @@ function Hero () {
                     <img src={PortraitImg} alt="Marius Lassl Portrait" className="w-full object-contain h-full object-bottom"/>
                 </div>
             </div>
+            </motion.div>
         </>
     )
 }

@@ -20,15 +20,15 @@ function App() {
                                   </div>
                               </div>
 
-                              <div className="relative w-full bg-dark text-white min-h-[500px]">
-                                  <div className="absolute -top-24 left-0 w-full h-24 bg-dark clip-triangle-top"></div>
+                              <div className="relative w-full bg-dark text-white min-h-[500px] z-30">
+                                  <div className="absolute -top-24 left-0 w-full h-24 bg-dark clip-triangle-top "></div>
 
                                   <div className="relative z-10 p-8 max-w-[2000px] mx-auto">
                                       <Skills />
                                   </div>
                               </div>
 
-                              <div style={{ backgroundImage: `url(${BgImg})`}}  className={`relative w-full min-h-[500px] h-full flex flex-col bg-dark bg-cover bg-fixed bg-[center] `}>
+                              <div style={{ backgroundImage: `url(${BgImg})`}}  className={`relative w-full min-h-[500px] h-full flex flex-col bg-dark bg-cover bg-fixed bg-[right] `}>
                                   <div className="absolute top-0 left-0 w-full h-24 bg-dark clip-triangle-bottom"></div>
                                   <div className="relative z-10 p-8 pb-0 max-w-[2000px] mx-auto">
                                       <Projects />
