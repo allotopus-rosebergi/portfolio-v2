@@ -91,7 +91,7 @@ const ProjectsDetailed = () => {
                     {project.casestudy}
 
                     <div className={`${styles.padding} w-full flex justify-center`}>
-                        <AnimatedButton primary rounded onClick={() => (window.location.href = "#/#projects")}> Zurück zur Übersicht </AnimatedButton>
+                        <AnimatedButton primary rounded onClick={() => (window.location.href = "#/#projects")}> Zurück zur Projektübersicht </AnimatedButton>
                     </div>
                 </div>
                 <Footer/>

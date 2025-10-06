@@ -61,7 +61,7 @@ function Navigation({color = 'text-light', alignment = 'sm:justify-center'}) {
                                 smooth to={`/#${link.slug}`}
                                 className={`${
                                     active === link.slug ? "text-light" : "text-light"
-                                } block text-4xl`}
+                                } block text-4xl text-left`}
                                 onClick={() => {
                                     setActive(link.slug);
                                     setDrawerOpen(false);

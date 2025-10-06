@@ -8,6 +8,7 @@ import LangfelderCS from "../components/casestudies/LangfelderCS.jsx"
 
 import cover_mangrove from "../assets/projects/mangrove/can_front.webp"
 import bg_mangrove from "../assets/projects/mangrove/bg_mangrove.webp"
+import MangroveCS from "../components/casestudies/MangroveCS.jsx"
 
 import cover_wondrousnature from "../assets/projects/wondrousnature/cover_wondrousnature.webp"
 import bg_wondrousnature from "../assets/projects/wondrousnature/bg_wondrousnature.webp"
@@ -91,7 +92,7 @@ export const projects = [
 
     {
         id: '2',
-        title: 'Mangrove Energy',
+        title: 'MANGROVE Energy',
         slug: 'mangrove-energy',
         navcolor: 'text-dark',
 
@@ -104,12 +105,13 @@ export const projects = [
 
         year: '2022',
         problem: 'Im Rahmen einer Projektarbeit sollte eine konsistente und wiedererkennbare Markenidentität mit Logo, Leitbild und Webauftritt entwickelt werden.',
-        solution: 'Mit Mangrove Energy entstand eine energiegeladene Marke für Menschen mit großen Zielen. Die handillustrierte Schlange, kräftige Gelbtöne und die holzähnliche Hintergrundtextur schaffen ein starkes Erscheinungsbild. Dazu wurde ein WordPress-Onlineshop mit WooCommerce umgesetzt.',
+        solution: 'Mit MANGROVE Energy entstand eine energiegeladene Marke für Menschen mit großen Zielen. Die handillustrierte Schlange, kräftige Gelbtöne und die holzähnliche Hintergrundtextur schaffen ein starkes Erscheinungsbild. Dazu wurde ein WordPress-Onlineshop mit WooCommerce umgesetzt.',
         tools: [
             {category: 'Webentwicklung', tool: 'WordPress mit WooCommerce'},
             {category: 'Prototypenentwicklung', tool: 'Adobe XD'},
             {category: 'Logo und Verpackungsdesign', tool: 'Adobe PhotoShop und Illustrator'},
         ],
+        casestudy: MangroveCS,
     },
 
     {
@@ -126,7 +128,7 @@ export const projects = [
         tags: 'Eventmarketing, Printdesign',
 
         year: '2024',
-        problem: 'Das Maturaclubbing der HTL Krems Standort Zwettl, benötigte eine effektive Werbung, um möglichst viele Besucher zu erreichen und das Event im regionalen Raum sichtbar zu machen.',
+        problem: 'Das Maturaclubbing der HTL Krems, Standort Zwettl, benötigte eine effektive Werbung, um möglichst viele Besucher zu erreichen und das Event im regionalen Raum sichtbar zu machen.',
         solution: 'Ein durchdachtes Werbekonzept wurde entwickelt, inklusive Plakaten, Flyern, Eintrittskarten und vier gezielten Instagram-Posts, die über das Event, die Sponsoren, den Dresscode und die Tombolapreise informieren.',
         tools: [
             {category: 'Grafikdesign', tool: 'Adobe Photoshop und InDesign'},

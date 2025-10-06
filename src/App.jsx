@@ -28,7 +28,7 @@ function App() {
                                   </div>
                               </div>
 
-                              <div style={{ backgroundImage: `url(${BgImg})`}}  className={`relative w-full min-h-[500px] h-full flex flex-col bg-dark bg-cover bg-fixed bg-[right] `}>
+                              <div style={{ backgroundImage: `url(${BgImg})`}}  className={`relative w-full min-h-[500px] h-full flex flex-col bg-dark sm:bg-cover bg-fixed bg-[center] `}>
                                   <div className="absolute top-0 left-0 w-full h-24 bg-dark clip-triangle-bottom"></div>
                                   <div className="relative z-10 p-8 pb-0 max-w-[2000px] mx-auto">
                                       <Projects />
