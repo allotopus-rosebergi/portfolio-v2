@@ -20,6 +20,10 @@ import bg_natureswatch from "../assets/projects/natureswatch/natureswatch_mockup
 import cover_flowerexpress from "../assets/projects/flowerexpress/poster_mockup02_cover.webp"
 import bg_flowerexpress from "../assets/projects/flowerexpress/mockup.webp"
 
+import cover_vellap from "../assets/projects/vellap/VELLAP_comingsoon.png"
+
+import cover_photography from "../assets/projects/photography/photography-cover.png"
+
 
 export const navLinks = [
     {
@@ -62,6 +66,24 @@ export const skills = [
 export const projects = [
     {
         id: '0',
+        title: 'VELLAP Diagnostics',
+        slug: 'vellap',
+        disabled: true,
+
+        img: cover_vellap,
+        alt: 'VELLAP Diagnostics GmbH Shop',
+
+        background: bg_langfelder,
+
+        tags: 'UI/UX, Design System, Online-Shop',
+
+        year: '2026',
+        problem: '',
+        solution: '',
+        casestudy: null,
+    },
+    {
+        id: '1',
         title: 'Langfelder Bio Erdäpfel',
         slug: 'langfelder-bio',
 
@@ -91,7 +113,7 @@ export const projects = [
 
 
     {
-        id: '2',
+        id: '3',
         title: 'MANGROVE Energy',
         slug: 'mangrove-energy',
         navcolor: 'text-dark',
@@ -115,7 +137,7 @@ export const projects = [
     },
 
     {
-        id: '1',
+        id: '4',
         title: 'Black Tie Clubbing 2024',
         slug: 'black-tie-clubbing-2024',
         alignment: 'lg:px-48 sm:justify-start',
@@ -142,7 +164,7 @@ export const projects = [
     },
 
     {
-        id: '3',
+        id: '5',
         title: 'Wondrous Nature',
         slug: 'wondrous-nature',
         navcolor: 'text-dark',
@@ -162,6 +184,24 @@ export const projects = [
         ],
 
         casestudy: WondrousNatureCS,
+    },
+    {
+        id: '6',
+        title: 'Fotografie Portfolio',
+        slug: 'photography',
+        disabled: true,
+
+        img: cover_photography,
+        alt: 'Lassl Photography Portfolio',
+
+        background: bg_langfelder,
+
+        tags: 'UI/UX, Webdesign, Motion Design',
+
+        year: '2026',
+        problem: '',
+        solution: '',
+        casestudy: null,
     },
 ]
 

@@ -65,7 +65,10 @@ function Projects (){
                         {projects.map((project) => (
                             <Link
                                 to={`/${project.slug}`}
-                                key={project.id} className="w-full hover:cursor-none project"
+                                key={project.id}
+                                className={`w-full hover:cursor-none project ${
+                                    project.disabled ? "pointer-events-none" : ""
+                                }`}
                                  onMouseEnter={() => {
                                      console.log("Hover start");
                                      setCursorEnabled(true);
