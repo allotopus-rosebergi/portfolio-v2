@@ -20,7 +20,10 @@ import bg_natureswatch from "../assets/projects/natureswatch/natureswatch_mockup
 import cover_flowerexpress from "../assets/projects/flowerexpress/poster_mockup02_cover.webp"
 import bg_flowerexpress from "../assets/projects/flowerexpress/mockup.webp"
 
-import cover_vellap from "../assets/projects/vellap/VELLAP_comingsoon.png"
+import cover_vellap from "../assets/projects/vellap/vellap_cover.webp"
+import bg_vellap from "../assets/projects/vellap/vellap_hero.webp"
+import VellapCS from "../components/casestudies/VellapCS.jsx"
+
 
 import cover_photography from "../assets/projects/photography/photography-cover.png"
 
@@ -68,19 +71,29 @@ export const projects = [
         id: '0',
         title: 'VELLAP Diagnostics',
         slug: 'vellap',
-        disabled: true,
+        disabled: false,
 
         img: cover_vellap,
         alt: 'VELLAP Diagnostics GmbH Shop',
 
-        background: bg_langfelder,
+        background: bg_vellap,
 
         tags: 'UI/UX, Design System, Online-Shop',
 
-        year: '2026',
-        problem: '',
-        solution: '',
-        casestudy: null,
+        year: 'Go-Live: November 2026',
+        problem: 'Das "VELLAP Nexus" vereint vier verschiedene Unternehmen und Kompetenzen rund um die Entwicklung, Produktion und Markteinführung von Diagnostikprodukten.\n' +
+            '\n' +
+            'Die bestehende Website konnte die komplexen Prozesse und Abläufe nicht verständlich vermitteln und das Zusammenspiel der Unternehmen war nicht deutlich. Der alte Online-Shop richtete sich zudem nur an eine Zielgruppe und sollte zukünftig auch für, Apotheken und Großhändler geöffnet werden.',
+        solution: 'In enger Zusammenarbeit mit der Geschäftsleitung sowie der Grafik- und Marketingabteilung von Vellap wurde die bestehende Website vollständig neu strukturiert, visuell überarbeitet und in Figma konzipiert. Die daraus entwickelten Designs wurden anschließend mit WordPress, WooCommerce und Bricks umgesetzt.\n' +
+            '\n' +
+            'Ein besonderer Fokus lag dabei auf dem Aufbau eines WooCommerce Shops mit verschiedenen Customer Groups und einem Verifizierungsprozess für Großhändler, Apotheken und weitere Fachkunden. So erhält jede Gruppe Zugriff auf die für sie relevanten Inhalte.',
+        tools: [
+            {category: 'Wireframe & Prototyp', tool: 'Figma für Wireframing und Protoypenentwicklung'},
+            {category: 'Webdesign', tool: 'WordPress mit Bricks'},
+            {category: 'Shop', tool: 'Shop: WooCommerce'},
+            {category: 'PlugIn', tool: 'B2B-King für Verifizierungen und Rollenverteilung'},
+        ],
+        casestudy: VellapCS,
     },
     {
         id: '1',
